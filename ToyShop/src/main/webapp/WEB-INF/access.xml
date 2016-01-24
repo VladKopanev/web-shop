@@ -1,0 +1,41 @@
+<access>
+    <constraint>
+        <url-pattern>/order.do</url-pattern>
+        <role>admin</role>
+        <role>other</role>
+    </constraint>
+
+    <constraint>
+        <url-pattern>/cart.do</url-pattern>
+        <role>admin</role>
+    </constraint>
+
+    <constraint>
+        <url-pattern>/checkoutPage.do</url-pattern>
+        <role>admin</role>
+        <role>other</role>
+    </constraint>
+
+    <constraint>
+        <url-pattern>/signupPage.do</url-pattern>
+        <role>admin</role>
+        <role>user</role>
+    </constraint>
+
+    <constraint>
+        <url-pattern>/signup.do</url-pattern>
+        <role>admin</role>
+        <role>user</role>
+    </constraint>
+
+    <constraint>
+        <url-pattern>/login.do</url-pattern>
+        <role>admin</role>
+        <role>user</role>
+    </constraint>
+
+    <constraint>
+        <url-pattern>/logout.do</url-pattern>
+        <role>other</role>
+    </constraint>
+</access>
