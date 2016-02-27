@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-aop-4.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-expression-4.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/cage-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/logback-core-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/javax.servlet-api-3.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/slf4j-api-1.7.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-core-4.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-beans-4.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-web-4.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-webmvc-4.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/commons-lang3-3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/jcl-over-slf4j-1.7.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-context-4.1.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/logback-classic-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/commons-logging-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/jstl-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/shop/WEB-INF/lib/mysql-connector-java-5.1.38.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
