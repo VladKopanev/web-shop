@@ -1,8 +1,5 @@
 package ua.nure.kopaniev.util;
 
-/**
- * Created by Vladyslav_Kopaniev on 11/13/2015.
- */
 public class AppException extends RuntimeException {
     public AppException() {
     }

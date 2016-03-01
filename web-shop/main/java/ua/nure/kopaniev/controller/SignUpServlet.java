@@ -1,5 +1,14 @@
 package ua.nure.kopaniev.controller;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 import ua.nure.kopaniev.util.AppException;
 import ua.nure.kopaniev.util.Path;
 import ua.nure.kopaniev.bean.User;
@@ -23,68 +32,54 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
-@WebServlet("/signup.do/*")
-@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, // 2MB
-        maxFileSize = 1024 * 1024 * 10,               // 10MB
-        maxRequestSize = 1024 * 1024 * 50)            // 50 MB
-public class SignUpServlet extends HttpServlet {
+@Slf4j
+@Controller
+@RequestMapping("/signup")
+public class SignUpServlet {
 
+    @Autowired
+    CaptchaService captchaService;
+
+    @Autowired
+    UserService userService;
+
+    //TODO get ride of rules factory call
     private Map<String, ValidationRule> rules = new RulesFactoryImpl().getSignUpRules();
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ServiceFactories factories = (ServiceFactories) req.getServletContext().getAttribute("factories");
-        CaptchaServiceFactory captchaServiceFactory = factories.getCaptchaServiceFactory();
-        UserServiceFactory userServiceFactory = factories.getUserServiceFactory();
-        UserService userService = userServiceFactory.getUserService(req.getServletContext());
+    @RequestMapping(value = "/signup", method = RequestMethod.GET)
+    protected String getSignupPage(Model model) {
+        log.info("::getSignupPage()");
+        captchaService.setNewCaptchaCode(model);
+        return "signup";
+    }
 
-        SignUpData data;
-        boolean toysInfo;
-        boolean discountsInfo;
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    protected ModelAndView signup(SignUpData data,
+                                  @RequestParam("avatar") MultipartFile file) {
 
-        Part p = null;
-        if (req.getContentType() != null && req.getContentType().contains("multipart")) {
-            p = req.getPart("avatar");
-        }
-        String name = req.getParameter("name");
-        String surname = req.getParameter("surname");
-        String pass = req.getParameter("password");
-        String email = req.getParameter("email");
+        List<String> nonValidFields = rules
+                .entrySet()
+                .stream()
+                .filter(ruleEntry -> !ruleEntry.getValue().validate(data))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
 
-        data = new SignUpData(name, surname, pass, email);
-
-        toysInfo = "on".equals(req.getParameter("toysInfo"));
-        discountsInfo = "on".equals(req.getParameter("discountsInfo"));
-
-
-        List<String> nonValidFields = new ArrayList<>();
-        for (Map.Entry<String, ValidationRule> ruleEntry : rules.entrySet()) {
-            if (!ruleEntry.getValue().validate(data)) {
-                nonValidFields.add(ruleEntry.getKey());
-            }
-        }
 
         if (!nonValidFields.isEmpty()) {
-            req.setAttribute("nonValidFields", nonValidFields);
-            req.getRequestDispatcher(Path.SIGN_UP_PAGE_SERVLET).forward(req, resp);
-            return;
+            return new ModelAndView("signup")
+                    .addObject("nonValidFields", nonValidFields);
         }
 
-        try {
-            if (userService.getUser(data.getEmail()) != null) {
-                nonValidFields.add("email");
-                req.setAttribute("nonValidFields", nonValidFields);
-                req.getRequestDispatcher(Path.SIGN_UP_PAGE_SERVLET).forward(req, resp);
-                return;
-            }
-        } catch (AppException e) {
-            e.printStackTrace();
+        if (userService.getUser(data.getEmail()) != null) {
+            nonValidFields.add("email");
+            return new ModelAndView("signup")
+                    .addObject("nonValidFields", nonValidFields);
         }
 
-        String codeSavingMode = req.getServletContext().getInitParameter("savingMode");
-        CaptchaService captchaService = captchaServiceFactory.getCaptchaService(codeSavingMode);
-        if (!captchaService.checkCaptcha(req)) {
+
+        if (!captchaService.checkCaptcha()) {
             nonValidFields.add("user_code");
             req.setAttribute("nonValidFields", nonValidFields);
             req.getRequestDispatcher(Path.SIGN_UP_PAGE_SERVLET).forward(req, resp);
@@ -112,10 +107,5 @@ public class SignUpServlet extends HttpServlet {
             e.printStackTrace();
         }
         resp.sendRedirect(Path.HOME);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req, resp);
     }
 }

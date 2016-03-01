@@ -103,7 +103,7 @@
                 </c:when>
                 <c:otherwise>
                 <ul class="nav navbar-nav collapse navbar-collapse">
-                    <form id="checkoutForm" method="GET" action="/checkoutPage.do">
+                    <form id="checkoutForm" method="GET" action="/cart/checkoutPage">
                         <h3>Select shipping type and address</h3>
             	        <select class="dropdown" name="shipType" form="checkoutForm">
             	            <a href="#">Select shipping type<i class="fa fa-angle-down"></i>

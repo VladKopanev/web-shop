@@ -59,7 +59,13 @@ public class CartServlet {
 
     @RequestMapping(value = "/clear", method = RequestMethod.DELETE)
     private void clear() {
-        log.info("::clear({})");
+        log.info("::clear()");
         userCart.clear();
+    }
+
+    @RequestMapping(value = "/checkoutPage", method = RequestMethod.GET)
+    protected String checkout()  {
+        log.info("::checkout()");
+        return "checkout";
     }
 }

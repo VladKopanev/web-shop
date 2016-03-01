@@ -63,7 +63,7 @@
 					        <td class="cart_total">
 					        <p class="cart_total_price">$ ${userCart.getSumOfItems()}</p>
 					        </td>
-					        <td><form method="get" action="/checkoutPage.do">
+					        <td><form method="GET" action="/cart/checkoutPage">
 					                <input type="hidden" name="stage" value="1"/>
 					                <fieldset title="You must be logged in">
                                         <button type="submit">Checkout</button>

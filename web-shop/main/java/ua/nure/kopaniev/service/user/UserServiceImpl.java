@@ -3,9 +3,7 @@ package ua.nure.kopaniev.service.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import ua.nure.kopaniev.util.AppException;
 import ua.nure.kopaniev.bean.User;
 import ua.nure.kopaniev.repository.UserRepository;
 
@@ -16,12 +14,12 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     private UserRepository repository;
 
     @Override
-    public void addUser(User user) throws AppException {
+    public void addUser(User user) {
         repository.addUser(user);
     }
 
     @Override
-    public User getUser(String email) throws AppException {
+    public User getUser(String email) {
         return loadUserByUsername(email);
     }
 
@@ -33,7 +31,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     }
 
     @Override
-    public User loadUserByUsername(String email) throws UsernameNotFoundException {
+    public User loadUserByUsername(String email) {
         return repository.getUser(email);
     }
 }

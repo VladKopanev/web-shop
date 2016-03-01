@@ -22,7 +22,7 @@ public class CageCaptchaImpl implements Captcha {
     }
 
     @Override
-    public void drawCaptcha(OutputStream out, String code) throws IOException {
-        cageCaptcha.draw(code, out);
+    public byte[] drawCaptcha(String code) throws IOException {
+        return cageCaptcha.draw(code);
     }
 }

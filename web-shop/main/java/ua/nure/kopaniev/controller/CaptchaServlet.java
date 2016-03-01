@@ -1,7 +1,11 @@
 package ua.nure.kopaniev.controller;
 
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.nure.kopaniev.service.captcha.CaptchaService;
@@ -18,10 +22,11 @@ public class CaptchaServlet {
     @Autowired
     CaptchaService captchaService;
 
+    @SneakyThrows(IOException.class)
     @RequestMapping(value = "/captcha", method = RequestMethod.GET)
-    protected void drwCaptcha(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected byte[] drawCaptcha(@ModelAttribute String captchaCode) {
 
-       captchaService.drawCaptcha(req, resp);
+       return captchaService.drawCaptcha(captchaCode);
     }
 
 }

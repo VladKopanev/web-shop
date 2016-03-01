@@ -94,7 +94,7 @@
                 <div class="signup-form"><!--sign up form-->
                     <h2>New User Signup!</h2>
 
-                    <form name="signup" method="POST" action="/signup.do"
+                    <form name="signup" method="POST" action="/signup"
                           onsubmit="return validateSignUpForm(this)" enctype="multipart/form-data">
                         <fieldset
                                 title="Name must be from 3 to 16 only latin characters, underscores, hyphens, digits. ">

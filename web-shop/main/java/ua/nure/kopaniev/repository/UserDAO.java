@@ -40,7 +40,7 @@ public class UserDAO implements UserRepository {
     }
 
     @Override
-    public User getUser(String email) throws AppException {
+    public User getUser(String email) {
         log.info("::getUser({})", email);
 
         val sql = "SELECT * FROM user WHERE email = :email";

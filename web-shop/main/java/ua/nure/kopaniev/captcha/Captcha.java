@@ -6,5 +6,5 @@ import java.io.OutputStream;
 public interface Captcha {
     String generateCaptchaCode();
 
-    void drawCaptcha(OutputStream out, String code) throws IOException;
+    byte[] drawCaptcha(String code) throws IOException;
 }
