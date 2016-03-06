@@ -18,7 +18,7 @@ public abstract class CaptchaService {
     public abstract byte[] drawCaptcha(String captchaCode, Model model)
             throws IOException;
 
-    public abstract boolean checkCaptcha(@NonNull Long startRgstrTime, String captchaCode, String userCode);
+    public abstract boolean checkCaptcha(Long startRgstrTime, String captchaCode, String userCode);
 
     public abstract void removeCaptcha(Model model);
 
