@@ -2,247 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a52c04b-3f4e-459f-ae73-af1baa8d3496" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/java/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/main.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/AppException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/Path.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/Option.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/Order.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/OrderItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/OrderStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/QueryBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/Role.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/ShipType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/SortField.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/Toy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/bean/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/builder/RequestBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/captcha/CageCaptchaImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/captcha/Captcha.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/cart/UserCart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/cart/UserCartImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/AvatarServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/CaptchaServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/CartServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/CheckoutPageServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/HomeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/LoginServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/LogoutServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/OrderServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/PermitDenyMessageServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/ShopServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/SignUpPageServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/controller/SignUpServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/listener/ContextListenerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/listener/LoggerStartupListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/ItemRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/OrderRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/OrderRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/RepositoryFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/SQLItemRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/SQLUserRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/UserRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/UserRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/builder/QueryBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/transaction/Query.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/transaction/QueryException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/transaction/Transaction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/transaction/TransactionException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/transaction/TransactionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/repository/transaction/TransactionManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/ServiceFactories.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/ServiceFactoriesImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/captcha/CageCaptchaServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/captcha/CaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/captcha/CaptchaServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/captcha/ContextCaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/captcha/HiddenCaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/captcha/SessionCaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/items/ItemService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/items/ItemServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/items/ItemServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/items/ItemServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/orders/OrderService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/orders/OrderServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/orders/OrderServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/orders/OrderServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/user/UserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/user/UserServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/user/UserServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/service/user/UserServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/RulesFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/RulesFactoryImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/RulesFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/rules/EmailRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/rules/NameRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/rules/PasswordRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/rules/SignUpData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/rules/SurnameRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/nure/kopaniev/validation/rules/ValidationRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/META-INF/context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/AppException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/Path.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/Option.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/Order.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/OrderItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/OrderStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/QueryBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/Role.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/ShipType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/SortField.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/Toy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/bean/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/builder/RequestBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/captcha/CageCaptchaImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/captcha/Captcha.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/cart/UserCart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/cart/UserCartImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/AvatarServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/CaptchaServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/CartServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/CheckoutPageServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/HomeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/LoginServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/LogoutServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/OrderServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/PermitDenyMessageServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/ShopServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/SignUpPageServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/controller/SignUpServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/listener/ContextListenerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/listener/LoggerStartupListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/ItemRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/OrderRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/OrderRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/RepositoryFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/SQLItemRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/SQLUserRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/UserRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/UserRepositoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/builder/QueryBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/transaction/Query.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/transaction/QueryException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/transaction/Transaction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/transaction/TransactionException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/transaction/TransactionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/repository/transaction/TransactionManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/ServiceFactories.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/ServiceFactoriesImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/captcha/CageCaptchaServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/captcha/CaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/captcha/CaptchaServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/captcha/ContextCaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/captcha/HiddenCaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/captcha/SessionCaptchaService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/items/ItemService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/items/ItemServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/items/ItemServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/items/ItemServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/orders/OrderService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/orders/OrderServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/orders/OrderServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/orders/OrderServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/user/UserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/user/UserServiceFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/user/UserServiceFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/service/user/UserServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/RulesFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/RulesFactoryImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/RulesFactoryImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/rules/EmailRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/rules/NameRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/rules/PasswordRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/rules/SignUpData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/rules/SurnameRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/classes/ua/nure/kopaniev/validation/rules/ValidationRule.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/css/prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/css/price-range.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/css/responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/bear1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/bg_border.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/duck.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/lego-logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/lego_death_star.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/lego_millennium_falcon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/monopoly.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/munchkin_classic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/plain.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/rainbow_spring.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/searchicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/skipjack.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/images/home/yo-yo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/contact.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/gmaps.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/html5shiv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/jquery.prettyPhoto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/jquery.scrollUp.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/jquery.validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/locales.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/popup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/price-range.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/sort.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/js/validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/jsp/cart.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/jsp/checkout.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/jsp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/jsp/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/jsp/message.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/jsp/shop.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/jsp/signup.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/cage-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/commons-codec-1.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/commons-lang3-3.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/commons-logging-1.1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/jcl-over-slf4j-1.7.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/logback-classic-1.1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/logback-core-1.1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/slf4j-api-1.7.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-aop-4.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-beans-4.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-context-4.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-core-4.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-expression-4.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-web-4.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/lib/spring-webmvc-4.1.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/logback.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/root-context-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/captcha.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/cartItems.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/items.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/language.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/login.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/pagination.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/shoplink.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/slider-val.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/tags/valid.tag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/shop/web.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web-shop.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/captcha/CaptchaService.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/captcha/CaptchaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-shop.iml" afterPath="$PROJECT_DIR$/web-shop.iml" />
     </list>
     <ignored path="web-shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -283,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-109.19231">
-              <caret line="167" column="21" selection-start-line="167" selection-start-column="21" selection-end-line="167" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.16425121">
+              <caret line="172" column="20" selection-start-line="172" selection-start-column="20" selection-end-line="172" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -303,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05255023">
+            <state vertical-scroll-proportion="0.0">
               <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
@@ -360,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/orders/OrderService.java" />
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/orders/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/webapp/web.xml" />
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/bean/User.java" />
@@ -411,6 +171,7 @@
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/SurnameRule.java" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/root-context-servlet.xml" />
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/captcha/CaptchaService.java" />
+        <option value="$PROJECT_DIR$/web-shop.iml" />
       </list>
     </option>
   </component>
@@ -814,48 +575,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="web-shop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1426,21 +1145,20 @@
       <workItem from="1456250785853" duration="346000" />
       <workItem from="1456573060114" duration="8192000" />
       <workItem from="1456859032385" duration="5464000" />
-      <workItem from="1457272829567" duration="296000" />
+      <workItem from="1457272829567" duration="405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62712000" />
+    <option name="totallyTimeSpent" value="62821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1448,7 +1166,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2979502" sideWeight="0.49122807" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2979502" sideWeight="0.49122807" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30635402" sideWeight="0.50877196" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1462,6 +1180,7 @@
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3585185" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1817,14 +1536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-109.19231">
-          <caret line="167" column="21" selection-start-line="167" selection-start-column="21" selection-end-line="167" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1841,18 +1552,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-shop.iml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05255023">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.16425121">
+          <caret line="172" column="20" selection-start-line="172" selection-start-column="20" selection-end-line="172" selection-end-column="20" />
           <folding />
         </state>
       </provider>
