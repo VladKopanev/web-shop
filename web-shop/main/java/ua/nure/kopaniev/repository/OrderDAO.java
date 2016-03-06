@@ -7,11 +7,10 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
-import ua.nure.kopaniev.util.AppException;
 import ua.nure.kopaniev.bean.Order;
+import ua.nure.kopaniev.util.AppException;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Repository

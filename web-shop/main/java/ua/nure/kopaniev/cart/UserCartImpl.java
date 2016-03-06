@@ -4,7 +4,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import ua.nure.kopaniev.bean.Item;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
 @Scope("session")

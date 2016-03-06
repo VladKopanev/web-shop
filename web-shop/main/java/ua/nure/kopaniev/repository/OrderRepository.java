@@ -1,7 +1,7 @@
 package ua.nure.kopaniev.repository;
 
-import ua.nure.kopaniev.util.AppException;
 import ua.nure.kopaniev.bean.Order;
+import ua.nure.kopaniev.util.AppException;
 
 import java.util.List;
 

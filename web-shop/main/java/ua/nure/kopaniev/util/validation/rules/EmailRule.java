@@ -2,9 +2,6 @@ package ua.nure.kopaniev.util.validation.rules;
 
 import java.util.regex.Pattern;
 
-/**
- * Created by ���� on 03.11.2015.
- */
 public class EmailRule implements ValidationRule {
     private static final Pattern emailRegExp = Pattern.compile(".+@.+\\..+");
 

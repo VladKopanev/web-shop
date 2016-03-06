@@ -5,9 +5,9 @@ import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-import ua.nure.kopaniev.util.AppException;
 import ua.nure.kopaniev.bean.Item;
 import ua.nure.kopaniev.bean.QueryBean;
+import ua.nure.kopaniev.util.AppException;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
