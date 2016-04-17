@@ -18,7 +18,13 @@ public class CartServlet {
     private ItemService itemService;
 
     @Autowired
-    UserCart userCart;
+    private UserCart userCart;
+
+    @RequestMapping
+    public String getCart() {
+        log.info("::getCart()");
+        return "cart";
+    }
 
     @RequestMapping(value = "/add/{id}", method = RequestMethod.POST)
     private void add(@PathVariable long id) {

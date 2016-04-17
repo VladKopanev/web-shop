@@ -1,6 +1,7 @@
 package ua.nure.kopaniev.cart;
 
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 import ua.nure.kopaniev.bean.Item;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-@Scope("session")
+@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class UserCartImpl implements UserCart {
     Map<Item, Long> items = new LinkedHashMap<>();
 

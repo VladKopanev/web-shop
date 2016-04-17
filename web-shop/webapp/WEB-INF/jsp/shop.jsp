@@ -11,13 +11,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Shop | TOY-Shop</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/prettyPhoto.css" rel="stylesheet">
-    <link href="../css/animate.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet">
-    <link href="../css/responsive.css" rel="stylesheet">
-    <link href="../css/price-range.css" rel="stylesheet">
+    <link href="<c:url value="resources/css/bootstrap.min.css" />" rel="stylesheet">
+    <link href="<c:url value="resources/css/font-awesome.min.css" />" rel="stylesheet">
+    <link href="<c:url value="resources/css/price-range.css" />" rel="stylesheet">
+    <link href="<c:url value="resources/css/animate.css" />" rel="stylesheet">
+    <link href="<c:url value="resources/css/main.css" />" rel="stylesheet">
+    <link href="<c:url value="resources/css/responsive.css" />" rel="stylesheet">
 
 </head>
 <!--/head-->

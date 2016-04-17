@@ -20,7 +20,7 @@ import java.util.Map;
 public class ItemDAO implements ItemRepository {
 
     @Autowired
-    NamedParameterJdbcTemplate template;
+    private NamedParameterJdbcTemplate template;
 
     @Override
     public List<Item> getItems(QueryBean bean) throws AppException {

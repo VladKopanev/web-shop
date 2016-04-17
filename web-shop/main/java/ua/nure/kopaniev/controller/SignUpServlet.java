@@ -32,20 +32,20 @@ public class SignUpServlet {
     @Autowired
     private UserService userService;
 
-    @Value("avatar.dir")
+    @Value("${avatar.dir}")
     private String avaDir;
 
     @Autowired
     private ValidationRulesContainer<SignUpData> rulesContainer;
 
-    @RequestMapping(value = "/signup", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     protected String getSignupPage(Model model) {
         log.info("::getSignupPage()");
         captchaService.setNewCaptchaCode(model);
         return "signup";
     }
 
-    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST)
     protected ModelAndView signup(SignUpData data,
                                   @ModelAttribute Long startRgstrTime,
                                   @ModelAttribute String captchaCode,

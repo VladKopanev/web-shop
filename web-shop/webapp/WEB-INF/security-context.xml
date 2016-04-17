@@ -8,13 +8,13 @@
 
     <http auto-config="true">
         <intercept-url pattern="/admin**" access="ROLE_USER" />
-        <form-login login-page="jsp/login.jsp"
-                    default-target-url="jsp/index.jsp"
-                    authentication-failure-url="jsp/login.jsp?error=true"
+        <form-login login-page="/jsp/login.jsp"
+                    default-target-url="/jsp/index.jsp"
+                    authentication-failure-url="/jsp/login.jsp?error=true"
                     username-parameter="email"
                     password-parameter="pass"/>
         <csrf/>
-        <logout logout-success-url="jsp/login.jsp" />
+        <logout logout-success-url="/jsp/login.jsp" />
     </http>
 
     <authentication-manager>

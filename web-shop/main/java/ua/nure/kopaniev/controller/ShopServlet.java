@@ -19,7 +19,7 @@ public class ShopServlet {
     ItemService itemService;
 
     //TODO implement model overwriting with query params
-    @RequestMapping(value = "/view", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public ModelAndView viewShop(QueryBean query) {
         log.info("::viewShop({})", query);
 

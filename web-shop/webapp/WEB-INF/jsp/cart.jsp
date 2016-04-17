@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="u" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,35 +9,35 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Cart | ToyShop</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <spring:url value="/resources/css/main.css" var="mainCss" />
+    <spring:url value="/resources/css/bootstrap.min.css" var="bootstrap" />
+    <spring:url value="/resources/css/font-awesome.min.css" var="fontAwesome" />
+    <spring:url value="/resources/css/price-range.css" var="priceRange" />
+    <spring:url value="/resources/css/animate.css" var="animate" />
+    <spring:url value="/resources/css/responsive.css" var="responsive" />
+    <spring:url value="/resources/css/html5shiv.js" var="html5shiv" />
+
+    <link href="${bootstrap}" rel="stylesheet">
+    <link href="${fontAwesome}" rel="stylesheet">
+    <link href="${priceRange}" rel="stylesheet">
+    <link href="${animate}" rel="stylesheet">
+    <link href="${mainCss}" rel="stylesheet">
+    <link href="${responsive}" rel="stylesheet">
+    <script src="${html5shiv}"></script>
 </head>
 <!--/head-->
 
 <body>
 <header id="header"><!--header-->
+    <spring:url value="/resources/images/home/html5shiv.js" var="html5shiv" />
 
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="index.jsp"><img src="images/home/lego-logo.jpg" alt="home" width="139"
-                                                 hight="39"/></a>
+                        <a href="/home"><img src="*" alt="home" width="139"
+                                                  hight="39"/></a>
                     </div>
                     <div class="btn-group pull-right">
                         <div class="btn-group">
@@ -64,11 +66,10 @@
                             </div>
                             <div class="mainmenu pull-left">
                                 <ul class="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="index.jsp" class="active">Home</a></li>
-                                    <li><a href="/shop.do">Products</a></li>
-                                    <li><a href="/signupPage.do">Sign Up</a></li>
-                                    <li><a href="/cart.do">Cart</a></li>
-                                    </li>
+                                    <li><a href="/home" class="active">Home</a></li>
+                                    <li><a href="/shop">Products</a></li>
+                                    <li><a href="/signup">Sign Up</a></li>
+                                    <li><a href="/cart">Cart</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -80,16 +81,23 @@
                     </div>
                 </div>
             </div>
-            <!--/header-bottom-->
+        </div>
+    </div>
+    <!--/header-bottom-->
 </header>
 <!--/header-->
 
 <u:cartItems/>
+<spring:url value="/resources/js/jquery.js" var="jquery" />
+<spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs" />
+<spring:url value="/resources/js/jquery.scrollUp.min.js" var="scrollUpJs" />
+<spring:url value="/resources/js/jquery.prettyPhoto.js" var="prettyJs"/>
+<spring:url value="/resources/js/main.js" var="mainJs" />
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/main.js"></script>
+<script src="${jquery}"></script>
+<script src="${bootstrapJs}"></script>
+<script src="${scrollUpJs}"></script>
+<script src="${prettyJs}"></script>
+<script src="${mainJs}"></script>
 </body>
 </html>

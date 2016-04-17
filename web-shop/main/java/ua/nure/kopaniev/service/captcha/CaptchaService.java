@@ -1,6 +1,5 @@
 package ua.nure.kopaniev.service.captcha;
 
-import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -10,7 +9,7 @@ import java.io.IOException;
 @Service
 public abstract class CaptchaService {
 
-    @Value("captcha.timeout")
+    @Value("${captcha.timeout}")
     private int timeout;
 
     public abstract void setNewCaptchaCode(Model model);
