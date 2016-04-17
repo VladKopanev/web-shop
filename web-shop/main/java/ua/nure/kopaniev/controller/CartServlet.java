@@ -57,7 +57,7 @@ public class CartServlet {
     }
 
     @RequestMapping(value = "/checkoutPage", method = RequestMethod.GET)
-    protected String checkout()  {
+    public String checkout()  {
         log.info("::checkout()");
         return "checkout";
     }

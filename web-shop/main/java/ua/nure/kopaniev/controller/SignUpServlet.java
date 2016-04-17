@@ -39,14 +39,14 @@ public class SignUpServlet {
     private ValidationRulesContainer<SignUpData> rulesContainer;
 
     @RequestMapping(method = RequestMethod.GET)
-    protected String getSignupPage(Model model) {
+    public String getSignupPage(Model model) {
         log.info("::getSignupPage()");
         captchaService.setNewCaptchaCode(model);
         return "signup";
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    protected ModelAndView signup(SignUpData data,
+    public ModelAndView signup(SignUpData data,
                                   @ModelAttribute Long startRgstrTime,
                                   @ModelAttribute String captchaCode,
                                   @RequestParam("user_code") String userCode,

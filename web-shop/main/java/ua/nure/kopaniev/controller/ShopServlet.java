@@ -16,7 +16,7 @@ import ua.nure.kopaniev.service.items.ItemService;
 public class ShopServlet {
 
     @Autowired
-    ItemService itemService;
+    private ItemService itemService;
 
     //TODO implement model overwriting with query params
     @RequestMapping(method = RequestMethod.GET)

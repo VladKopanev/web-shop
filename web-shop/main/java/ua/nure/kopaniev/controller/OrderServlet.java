@@ -15,10 +15,10 @@ import ua.nure.kopaniev.service.orders.OrderService;
 public class OrderServlet {
 
     @Autowired
-    OrderService orderService;
+    private OrderService orderService;
 
     @RequestMapping(value = "/order", method = RequestMethod.POST)
-    protected String makeOrder(@ModelAttribute User user, @ModelAttribute UserCart userCart,
+    public String makeOrder(@ModelAttribute User user, @ModelAttribute UserCart userCart,
                              String shipType, String shipAddress) {
         log.info("::makeOrder({}, {}, {}, {})", user, userCart, shipType, shipAddress);
         orderService.makeOrder();

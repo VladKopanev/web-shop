@@ -21,7 +21,7 @@ public abstract class CaptchaService {
 
     public abstract void removeCaptcha(Model model);
 
-    protected boolean checkTimeOut(long startRegistrationTime) {
+    public boolean checkTimeOut(long startRegistrationTime) {
         long timePassed = System.currentTimeMillis() - startRegistrationTime;
         int minutesPassed = (int)(timePassed / (1000 * 60));
         return minutesPassed < timeout;

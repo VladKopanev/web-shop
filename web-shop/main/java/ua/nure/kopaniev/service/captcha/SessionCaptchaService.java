@@ -15,7 +15,7 @@ import java.io.IOException;
 public class SessionCaptchaService extends CaptchaService {
 
     @Autowired
-    Captcha captcha;
+    private Captcha captcha;
 
     @Override
     public void setNewCaptchaCode(Model model) {

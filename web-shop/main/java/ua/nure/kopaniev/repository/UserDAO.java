@@ -17,7 +17,7 @@ import java.util.HashMap;
 public class UserDAO implements UserRepository {
 
     @Autowired
-    NamedParameterJdbcTemplate template;
+    private NamedParameterJdbcTemplate template;
 
     @Override
     public void addUser(User user) {

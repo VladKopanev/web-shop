@@ -23,14 +23,13 @@ public class AvatarServlet {
     private String defaultAvatarPath;
 
     @RequestMapping(value = "/avatar", produces = "image/jpg")
-    protected byte[] getAvatar(@ModelAttribute User user) throws IOException {
+    public byte[] getAvatar(@ModelAttribute User user) throws IOException {
 
         log.info("::getAvatar({})", user);
-        val sb = new StringBuilder(avatarDir)
-                            .append(File.separator)
-                            .append(user.getEmail());
 
-        File avaFile = new File(sb.toString());
+        File avaFile = new File(avatarDir +
+                File.separator +
+                user.getEmail());
 
         if (!avaFile.exists()) {
             avaFile = new File(defaultAvatarPath);

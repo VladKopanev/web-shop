@@ -22,7 +22,7 @@ public class OrderServiceImpl implements OrderService {
     private UserService userService;
 
     @Autowired
-    UserCart cart;
+    private UserCart cart;
 
     @Override
     @Transactional

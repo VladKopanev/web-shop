@@ -15,11 +15,11 @@ import java.io.IOException;
 public class CaptchaServlet {
 
     @Autowired
-    CaptchaService captchaService;
+    private CaptchaService captchaService;
 
     @SneakyThrows(IOException.class)
     @RequestMapping(value = "/captcha", method = RequestMethod.GET)
-    protected byte[] drawCaptcha(@ModelAttribute String captchaCode, Model model) {
+    public byte[] drawCaptcha(@ModelAttribute String captchaCode, Model model) {
 
        return captchaService.drawCaptcha(captchaCode, model);
     }
