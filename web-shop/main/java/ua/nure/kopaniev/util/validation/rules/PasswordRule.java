@@ -7,6 +7,6 @@ public class PasswordRule implements ValidationRule {
 
     @Override
     public boolean validate(SignUpData rd) {
-        return rd.getPassword()!= null && passRegExp.matcher(rd.getPassword()).matches();
+        return rd.getPassword() != null && passRegExp.matcher(rd.getPassword()).matches();
     }
 }

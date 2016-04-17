@@ -13,7 +13,7 @@ import ua.nure.kopaniev.service.items.ItemService;
 @Slf4j
 @Controller
 @RequestMapping("/shop")
-public class ShopServlet {
+public class ShopController {
 
     @Autowired
     private ItemService itemService;
@@ -22,10 +22,6 @@ public class ShopServlet {
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView viewShop(QueryBean query) {
         log.info("::viewShop({})", query);
-
-        val mav = new ModelAndView("shop");
-
-        mav.addObject("shopItems", itemService.getItems(query));
-        return mav;
+        return new ModelAndView("shop").addObject("shopItems", itemService.getItems(query));
     }
 }

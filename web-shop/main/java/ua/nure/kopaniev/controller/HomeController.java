@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Slf4j
 @Controller
+@RequestMapping("/home")
 public class HomeController {
 
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String home() {
         log.info("::home()");
-
         return "index";
     }
 }

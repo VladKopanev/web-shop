@@ -7,6 +7,6 @@ public class NameRule implements ValidationRule {
 
     @Override
     public boolean validate(SignUpData rd) {
-        return rd.getName()!= null && nameRegExp.matcher(rd.getName()).matches();
+        return rd.getName() != null && nameRegExp.matcher(rd.getName()).matches();
     }
 }

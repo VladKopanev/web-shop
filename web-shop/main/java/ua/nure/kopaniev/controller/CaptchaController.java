@@ -12,7 +12,7 @@ import ua.nure.kopaniev.service.captcha.CaptchaService;
 import java.io.IOException;
 
 @Controller
-public class CaptchaServlet {
+public class CaptchaController {
 
     @Autowired
     private CaptchaService captchaService;
@@ -20,8 +20,6 @@ public class CaptchaServlet {
     @SneakyThrows(IOException.class)
     @RequestMapping(value = "/captcha", method = RequestMethod.GET)
     public byte[] drawCaptcha(@ModelAttribute String captchaCode, Model model) {
-
-       return captchaService.drawCaptcha(captchaCode, model);
+        return captchaService.drawCaptcha(captchaCode, model);
     }
-
 }

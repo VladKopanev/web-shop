@@ -23,7 +23,7 @@ public abstract class CaptchaService {
 
     public boolean checkTimeOut(long startRegistrationTime) {
         long timePassed = System.currentTimeMillis() - startRegistrationTime;
-        int minutesPassed = (int)(timePassed / (1000 * 60));
+        int minutesPassed = (int) (timePassed / (1000 * 60));
         return minutesPassed < timeout;
     }
 }

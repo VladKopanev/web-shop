@@ -13,18 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @Controller
-public class LogoutServlet {
+public class LogoutController {
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logout(HttpServletRequest req, HttpServletResponse resp) {
-
         log.info("::logout()");
-        val auth = SecurityContextHolder.getContext().getAuthentication();
-
-        if (auth != null) {
-            new SecurityContextLogoutHandler().logout(req, resp, auth);
-        }
-
+        new SecurityContextLogoutHandler()
+                .logout(req, resp, SecurityContextHolder.getContext().getAuthentication());
         log.info("redirecting to login page");
         return "redirect:/login";
     }

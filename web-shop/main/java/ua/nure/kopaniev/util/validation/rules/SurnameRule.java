@@ -7,6 +7,6 @@ public class SurnameRule implements ValidationRule {
 
     @Override
     public boolean validate(SignUpData rd) {
-        return rd.getSurename()!= null && surnameRegExp.matcher(rd.getSurename()).matches();
+        return rd.getSurename() != null && surnameRegExp.matcher(rd.getSurename()).matches();
     }
 }

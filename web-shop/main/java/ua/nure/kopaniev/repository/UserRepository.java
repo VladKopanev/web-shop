@@ -7,5 +7,6 @@ import ua.nure.kopaniev.bean.User;
  */
 public interface UserRepository {
     void addUser(User u);
+
     User getUser(String email);
 }

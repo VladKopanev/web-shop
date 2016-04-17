@@ -9,12 +9,20 @@ import java.util.List;
  */
 public interface UserCart {
     void add(Item item);
+
     long increase(long id);
+
     long decrease(long id);
+
     void remove(long id);
+
     void clear();
+
     List<Item> getItems();
+
     long getCountOfItems(Item item);
+
     long getCount();
+
     Float getSumOfItems();
 }

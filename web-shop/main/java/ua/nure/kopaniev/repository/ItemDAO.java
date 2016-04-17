@@ -80,7 +80,7 @@ public class ItemDAO implements ItemRepository {
         log.info("::getItem({})", id);
 
         val sql = "SELECT * FROM item WHERE id = " + id;
-        return template.queryForObject(sql, (Map<String, ?>)null, this::toItem);
+        return template.queryForObject(sql, (Map<String, ?>) null, this::toItem);
     }
 
     private Item toItem(ResultSet rs, int rowNum) throws SQLException {

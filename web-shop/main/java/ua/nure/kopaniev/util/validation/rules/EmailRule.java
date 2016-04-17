@@ -7,6 +7,6 @@ public class EmailRule implements ValidationRule {
 
     @Override
     public boolean validate(SignUpData rd) {
-        return rd.getEmail()!= null && emailRegExp.matcher(rd.getEmail()).matches();
+        return rd.getEmail() != null && emailRegExp.matcher(rd.getEmail()).matches();
     }
 }

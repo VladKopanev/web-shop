@@ -12,17 +12,16 @@ import ua.nure.kopaniev.service.orders.OrderService;
 
 @Slf4j
 @Controller
-public class OrderServlet {
+public class OrderController {
 
     @Autowired
     private OrderService orderService;
 
     @RequestMapping(value = "/order", method = RequestMethod.POST)
     public String makeOrder(@ModelAttribute User user, @ModelAttribute UserCart userCart,
-                             String shipType, String shipAddress) {
+                            String shipType, String shipAddress) {
         log.info("::makeOrder({}, {}, {}, {})", user, userCart, shipType, shipAddress);
         orderService.makeOrder();
-
         return "index";
     }
 }

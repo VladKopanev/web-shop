@@ -12,7 +12,7 @@ import ua.nure.kopaniev.service.items.ItemService;
 @Slf4j
 @Controller
 @RequestMapping("/cart")
-public class CartServlet {
+public class CartController {
 
     @Autowired
     private ItemService itemService;
@@ -57,7 +57,7 @@ public class CartServlet {
     }
 
     @RequestMapping(value = "/checkoutPage", method = RequestMethod.GET)
-    public String checkout()  {
+    public String checkout() {
         log.info("::checkout()");
         return "checkout";
     }

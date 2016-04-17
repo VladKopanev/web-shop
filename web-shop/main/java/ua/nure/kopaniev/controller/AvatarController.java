@@ -14,7 +14,7 @@ import java.io.IOException;
 
 @Slf4j
 @Controller
-public class AvatarServlet {
+public class AvatarController {
 
     @Value("${avatar.dir}")
     private String avatarDir;
@@ -24,17 +24,13 @@ public class AvatarServlet {
 
     @RequestMapping(value = "/avatar", produces = "image/jpg")
     public byte[] getAvatar(@ModelAttribute User user) throws IOException {
-
         log.info("::getAvatar({})", user);
-
         File avaFile = new File(avatarDir +
                 File.separator +
                 user.getEmail());
-
         if (!avaFile.exists()) {
             avaFile = new File(defaultAvatarPath);
         }
-
         return FileUtils.readFileToByteArray(avaFile);
     }
 }
