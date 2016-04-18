@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a52c04b-3f4e-459f-ae73-af1baa8d3496" name="Default" comment="Refactored default-pakage autowired beans to be private and protected methods in controllers to be public.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/Path.java" afterPath="" />
+    <list default="true" id="1a52c04b-3f4e-459f-ae73-af1baa8d3496" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Main.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/SampleServiceActor.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Stuff.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/bean/Role.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/bean/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/cart/UserCart.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/cart/UserCart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/HomeController.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/listener/LoggerStartupListener.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/listener/LoggerStartupListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/repository/ItemDAO.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/repository/ItemDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/repository/OrderDAO.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/repository/OrderDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/repository/UserRepository.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/captcha/CaptchaService.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/captcha/CaptchaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/EmailRule.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/EmailRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/NameRule.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/NameRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/PasswordRule.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/PasswordRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/SignUpData.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/SignUpData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/SurnameRule.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/SurnameRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/ValidationRule.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/rules/ValidationRule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/resources/application.properties" afterPath="$PROJECT_DIR$/main/resources/application.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/AvatarServlet.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/AvatarController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/CaptchaServlet.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/CaptchaController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/CartServlet.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/CartController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/LogoutServlet.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/LogoutController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/OrderServlet.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/OrderController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/ShopServlet.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/ShopController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/SignUpServlet.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/SignUpController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-shop.iml" afterPath="$PROJECT_DIR$/web-shop.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/web.xml" afterPath="$PROJECT_DIR$/webapp/web.xml" />
     </list>
     <ignored path="web-shop.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/pay-system-mock/target/" />
+    <ignored path="$PROJECT_DIR$/pay-system-mock/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/pay-system-mock/project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +44,79 @@
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/pay-system-mock">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="web-shop" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pay-system-mock/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.185185">
+              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SampleServiceActor.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/SampleServiceActor.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2631579">
+              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+              <folding>
+                <element signature="e#25#48#0" expanded="true" />
+                <element signature="e#295#332#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParameterDirectives.scala" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-routing_2.10/srcs/spray-routing_2.10-1.3.2-sources.jar!/spray/routing/directives/ParameterDirectives.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stuff.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Stuff.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Main.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+              <folding>
+                <element signature="e#25#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,11 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/PermitDenyMessageServlet.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/main/java/application.properties" />
-        <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/captcha/Captcha.java" />
-        <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/captcha/CageCaptchaImpl.java" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/jsp/signup.jsp" />
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/SignUpPageServlet.java" />
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/util/validation/RulesFactoryImpl.java" />
@@ -109,7 +159,6 @@
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/cart/UserCartImpl.java" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/tags/cartItems.tag" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/security-context.xml" />
-        <option value="$PROJECT_DIR$/webapp/web.xml" />
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/repository/ItemDAO.java" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/jsp/shop.jsp" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/jsp/index.jsp" />
@@ -135,6 +184,12 @@
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/SignUpController.java" />
         <option value="$PROJECT_DIR$/main/java/ua/nure/kopaniev/listener/LoggerStartupListener.java" />
         <option value="$PROJECT_DIR$/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/webapp/web.xml" />
+        <option value="$PROJECT_DIR$/pay-system-mock/build.sbt" />
+        <option value="$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/SampleServiceActors.scala" />
+        <option value="$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Main.scala" />
+        <option value="$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Stuff.scala" />
+        <option value="$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/SampleServiceActor.scala" />
       </list>
     </option>
   </component>
@@ -559,7 +614,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="pay-system-mock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pay-system-mock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pay-system-mock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -584,12 +679,18 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Влад/8/Lab2" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pay-system-mock/build.sbt" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ua.nure.kopaniev.util.validation" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Влад\Универ\web-shop\main\java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\repo\web-shop\webapp\resources" />
       <recent name="D:\repo\web-shop\webapp" />
@@ -597,14 +698,28 @@
       <recent name="D:\Влад\Универ\web-shop\webapp\WEB-INF\jsp" />
       <recent name="D:\Влад\Универ\web-shop\main\java" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Влад\Универ\web-shop\main\java" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ua.nure.kopaniev.util.validation" />
-    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.WebShop">
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ua.nure.pay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.ua.nure.pay.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pay-system-mock" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -1171,11 +1286,42 @@
         </option>
       </method>
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.WebShop" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
+    <option name="lastUpdateTimestamp" value="1461000275523" />
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="pay-system-mock" />
+              <option name="path" value="$PROJECT_DIR$/pay-system-mock" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="pay-system-mock" />
+                <option name="path" value="$PROJECT_DIR$/pay-system-mock" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="pay-system-mock-build" />
+                <option name="path" value="$PROJECT_DIR$/pay-system-mock/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="modificationStamps">
       <map>
         <entry key="D:/Scala/Projects/Hello-play" value="1442856048529" />
@@ -1210,7 +1356,7 @@
       <workItem from="1457894527033" duration="1427000" />
       <workItem from="1458194171238" duration="1927000" />
       <workItem from="1460277437246" duration="153000" />
-      <workItem from="1460811917198" duration="12307000" />
+      <workItem from="1460811917198" duration="20676000" />
     </task>
     <task id="LOCAL-00001" summary="Another minor fix commit.">
       <created>1460900658963</created>
@@ -1224,37 +1370,45 @@
       <option name="project" value="LOCAL" />
       <updated>1460902291989</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Another portion of refactoring.">
+      <created>1460903936421</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1460903936421</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82225000" />
+    <option name="totallyTimeSpent" value="90594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32740742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37745097" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42647058" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.295764" sideWeight="0.47398844" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239032" sideWeight="0.47293448" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.295764" sideWeight="0.5260116" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22239032" sideWeight="0.5270655" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1278,11 +1432,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Another minor fix commit." />
     <MESSAGE value="Refactored default-pakage autowired beans to be private and protected methods in controllers to be public." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored default-pakage autowired beans to be private and protected methods in controllers to be public." />
+    <MESSAGE value="Another portion of refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Another portion of refactoring." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1291,99 +1446,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapp/resources/js/price-range.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/fonts/glyphicons-halflings-regular.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/css/prettyPhoto.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/css/price-range.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/fonts/fontawesome-webfont.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/css/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/structural.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33278418">
-          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/tags/cartItems.tag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029259896">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/security-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3207547">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.1.RELEASE/spring-jdbc-4.1.1.RELEASE-sources.jar!/org/springframework/jdbc/datasource/AbstractDriverBasedDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0133333">
@@ -1408,14 +1470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.8412256">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66295266">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1681,11 +1735,130 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8073394">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pay-system-mock/project/target/config-classes/$1ec7f22063bf378e7b6e$.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5263158">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14447592">
+        <state vertical-scroll-proportion="0.15789473">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pay-system-mock/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.185185">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/srcs/akka-actor_2.10-2.3.9-sources.jar!/akka/actor/Actor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="453" column="6" selection-start-line="453" selection-start-column="6" selection-end-line="453" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-routing_2.10/srcs/spray-routing_2.10-1.3.2-sources.jar!/spray/routing/HttpService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33126935">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/srcs/akka-actor_2.10-2.3.9-sources.jar!/akka/actor/Extension.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2631578">
+          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/srcs/akka-actor_2.10-2.3.9-sources.jar!/akka/io/IO.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-can_2.10/srcs/spray-can_2.10-1.3.2-sources.jar!/spray/can/Http.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33126935">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-routing_2.10/srcs/spray-routing_2.10-1.3.2-sources.jar!/spray/routing/RejectionHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+          <folding>
+            <element signature="e#25#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/Stuff.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-routing_2.10/srcs/spray-routing_2.10-1.3.2-sources.jar!/spray/routing/directives/ParameterDirectives.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/io.spray/spray-routing_2.10/srcs/spray-routing_2.10-1.3.2-sources.jar!/spray/routing/directives/NameReceptacle.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33126935">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pay-system-mock/src/com/ua/nure/pay/SampleServiceActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2631579">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding>
+            <element signature="e#25#48#0" expanded="true" />
+            <element signature="e#295#332#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1749,7 +1922,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
