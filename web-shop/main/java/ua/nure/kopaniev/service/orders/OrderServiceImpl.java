@@ -26,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     @Transactional
-    public void makeOrder() throws AppException {
+    public void makeOrder() {
         long userId = userService.getCurrentUser().getId();
 
         List<Order> orders = cart.getItems().stream()

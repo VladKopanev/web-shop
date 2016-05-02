@@ -3,51 +3,30 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="u" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Shop | TOY-Shop</title>
-    <link href="<c:url value="resources/css/bootstrap.min.css" />" rel="stylesheet">
-    <link href="<c:url value="resources/css/font-awesome.min.css" />" rel="stylesheet">
-    <link href="<c:url value="resources/css/price-range.css" />" rel="stylesheet">
-    <link href="<c:url value="resources/css/animate.css" />" rel="stylesheet">
-    <link href="<c:url value="resources/css/main.css" />" rel="stylesheet">
-    <link href="<c:url value="resources/css/responsive.css" />" rel="stylesheet">
-
-</head>
+<u:head title="Shop"/>
 <!--/head-->
-
 <body>
 <header id="header"><!--header-->
-
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="index.jsp">
-                            <img src="../images/home/lego-logo.jpg" alt="home" heights="39" width="139" />
+                        <a href="/home">
+                            <img src="<c:url value="resources/images/book.gif" />" alt="home" height="39" width="139"/>
                         </a>
                     </div>
-                    <div class="btn-group pull-right">
-                        <div class="btn-group">
-                            <u:language/>
-                        </div>
-                    </div>
+
+                    <%@include file="../jspf/lang.jspf" %>
 
                 </div>
-
                 <!--LOGIN FORM-->
-                <u:login/>
-
+                <%@include file="../jspf/login.jspf" %>
             </div>
             <!--/header-middle-->
-
-
             <div class="header-bottom"><!--header-bottom-->
                 <div class="container">
                     <div class="row">
@@ -64,9 +43,9 @@
                             <div class="mainmenu pull-left">
                                 <ul class="nav navbar-nav collapse navbar-collapse">
                                     <li><a href="<c:url value="/home"/>" class="active">Home</a></li>
-                                    <li><a href="<c:url value="/shop/view"/>">Products</a></li>
-                                    <li><a href="/signupPage.do">Sign Up</a></li>
-                                    <li><a href="/cart.do">Cart</a></li>
+                                    <li><a href="<c:url value="/shop"/>">Products</a></li>
+                                    <li><a href="/signup">Sign Up</a></li>
+                                    <li><a href="/cart">Cart</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -79,10 +58,10 @@
                 </div>
             </div>
             <!--/header-bottom-->
+        </div>
+    </div>
 </header>
 <!--/header-->
-
-
 <section>
     <div class="container">
         <div class="row">
@@ -167,7 +146,7 @@
                             </ul>
                         </div>
                         <div>
-                            <form action="/shop.do" method="POST" id="filterForm">
+                            <form action="/shop" method="POST" id="filterForm">
                                 <input type="number" name="recordsPerPage" placeholder="records per page">
                                 <input type="submit">
                                 <input type="hidden" name="priceRange" id="priceRange" value="${param.priceRange}">
@@ -204,13 +183,13 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                <td>
+                                    <td>
                                     <span id="sortPriceSpan">Price
                                 <button onclick="setHiddenSortInput('ProductPrice', 'asc')">▲</button>
                                 <button onclick="setHiddenSortInput('ProductPrice', 'desc')">▼</button>
                                 <input type="hidden" id="ProductPrice" name="sort" form="filterForm"/>
                                 </span>
-                                </td>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -223,11 +202,10 @@
                     <h2 class="title text-center">Features Items</h2>
 
                     <!--PAGINATION-->
-                    <u:pagination/>
+                    <%@include file="../jspf/pagination.jspf" %>
 
                     <!--ITEMS-->
-                    <u:items/>
-
+                    <%@include file="../jspf/shopItems.jspf" %>
 
                 </div>
                 <!--features_items-->
@@ -236,13 +214,6 @@
     </div>
 </section>
 
-<script src="../js/sort.js"></script>
-<script src="../js/jquery.js"></script>
-<script src="../js/price-range.js"></script>
-<script src="../js/jquery.scrollUp.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.prettyPhoto.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/jquery.validation.js"></script>
+<%@include file="../jspf/scripts.jspf" %>
 </body>
 </html>

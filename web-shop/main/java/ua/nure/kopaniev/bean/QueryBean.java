@@ -2,6 +2,8 @@ package ua.nure.kopaniev.bean;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,9 +11,9 @@ import java.util.List;
  */
 @Data
 public class QueryBean {
-    private double priceFrom;
-    private double priceTo;
-    private List<String> publishers;
+    private double priceFrom = 0.0;
+    private double priceTo = Double.MAX_VALUE;
+    private List<String> publishers = new ArrayList<>();
     private String name;
     private String author;
     private long count;

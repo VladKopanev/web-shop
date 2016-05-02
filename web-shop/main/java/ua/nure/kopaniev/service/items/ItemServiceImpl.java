@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import ua.nure.kopaniev.bean.Item;
 import ua.nure.kopaniev.bean.QueryBean;
 import ua.nure.kopaniev.repository.ItemRepository;
-import ua.nure.kopaniev.util.AppException;
 
 import java.util.List;
 
@@ -16,17 +15,17 @@ public class ItemServiceImpl implements ItemService {
     private ItemRepository repository;
 
     @Override
-    public List<Item> getItems(QueryBean bean) throws AppException {
+    public List<Item> getItems(QueryBean bean) {
         return repository.getItems(bean);
     }
 
     @Override
-    public int getCountOfItems(QueryBean bean) throws AppException {
+    public int getCountOfItems(QueryBean bean) {
         return repository.getCountOfItems(bean);
     }
 
     @Override
-    public Item getItem(long id) throws AppException {
+    public Item getItem(long id) {
         return repository.getItem(id);
     }
 }

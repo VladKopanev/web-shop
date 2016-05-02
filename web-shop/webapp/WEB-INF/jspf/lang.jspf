@@ -1,0 +1,17 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<div class="btn-group pull-right">
+    <div class="btn-group">
+        <spring:url value="/resources/js/locales.js" var="locales" />
+        <script src="${locales}"></script>
+        <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+            LANG
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <c:forEach items="${supportedLang}" var="currentLanguage">
+                <li><a id="${currentLanguage}" onclick="langChange(${currentLanguage})" href="#">${currentLanguage}</a></li>
+            </c:forEach>
+        </ul>
+    </div>
+</div>

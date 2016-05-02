@@ -20,7 +20,7 @@ public class OrderDAO implements OrderRepository {
     private NamedParameterJdbcTemplate template;
 
     @Override
-    public void addOrders(List<Order> orders) throws AppException {
+    public void addOrders(List<Order> orders) {
         log.info("::addOrder({})", orders.toString());
 
         val sql = "INSERT INTO 'order'(id_user, id_item) VALUES (:id_user, :id_item)";

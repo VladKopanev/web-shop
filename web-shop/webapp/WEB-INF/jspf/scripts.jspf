@@ -1,0 +1,22 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<spring:url value="/resources/js/sort.js" var="sort"/>
+<spring:url value="/resources/js/jquery.js" var="jquery"/>
+<spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs"/>
+<spring:url value="/resources/js/jquery.scrollUp.min.js" var="scrollUpJs"/>
+<spring:url value="/resources/js/jquery.prettyPhoto.js" var="prettyJs"/>
+<spring:url value="/resources/js/main.js" var="mainJs"/>
+<spring:url value="/resources/js/validation.js" var="validationJs"/>
+<spring:url value="/resources/js/jquery.validation.js" var="jqueryValidation"/>
+<spring:url value="/resources/js/popup.js" var="popup"/>
+<spring:url value="/resources/js/price-range.js" var="range"/>
+
+<script src="${sort}"></script>
+<script src="${range}"></script>
+<script src="${jquery}"></script>
+<script src="${bootstrapJs}"></script>
+<script src="${scrollUpJs}"></script>
+<script src="${prettyJs}"></script>
+<script src="${mainJs}"></script>
+<script src="${validationJs}"></script>
+<script src="${jqueryValidation}"></script>
+<script src="${popup}"></script>

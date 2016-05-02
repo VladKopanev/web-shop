@@ -8,6 +8,7 @@ import java.util.List;
 
 
 public interface ItemRepository {
+
     List<Item> getItems(QueryBean bean) throws AppException;
 
     int getCountOfItems(QueryBean bean) throws AppException;

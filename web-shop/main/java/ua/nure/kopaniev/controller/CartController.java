@@ -44,10 +44,10 @@ public class CartController {
         userCart.decrease(id);
     }
 
-    @RequestMapping(value = "/remove/{id}", method = RequestMethod.DELETE)
-    private void remove(@PathVariable long id) {
-        log.info("::remove({})", id);
-        userCart.decrease(id);
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+    private void delete(@PathVariable long id) {
+        log.info("::delete({})", id);
+        userCart.remove(id);
     }
 
     @RequestMapping(value = "/clear", method = RequestMethod.DELETE)
@@ -56,9 +56,17 @@ public class CartController {
         userCart.clear();
     }
 
-    @RequestMapping(value = "/checkoutPage", method = RequestMethod.GET)
+    @RequestMapping(value = "/checkout", method = RequestMethod.GET)
     public String checkout() {
         log.info("::checkout()");
         return "checkout";
     }
+
+    @RequestMapping(value = "/checkout", method = RequestMethod.POST)
+    public String doCheckout() {
+        log.info("::doCheckout()");
+
+        return "checkout";
+    }
+
 }

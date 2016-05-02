@@ -8,9 +8,9 @@ import java.util.List;
 
 public interface ItemService {
 
-    List<Item> getItems(QueryBean bean) throws AppException;
+    List<Item> getItems(QueryBean bean);
 
-    int getCountOfItems(QueryBean bean) throws AppException;
+    int getCountOfItems(QueryBean bean);
 
-    Item getItem(long id) throws AppException;
+    Item getItem(long id);
 }
