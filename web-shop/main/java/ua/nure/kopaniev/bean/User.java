@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -11,7 +12,7 @@ import java.util.Date;
  * User info bean.
  */
 @Data
-public class User implements UserDetails {
+public class User implements UserDetails, Serializable {
     private long id;
     private String fullname;
     private String email;

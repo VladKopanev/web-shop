@@ -62,7 +62,6 @@
                                 <p class="cart_total_price" id="cartSum">${userCart.getSumOfItems()} $</p>
                             </td>
                             <td><form method="GET" action="/cart/checkout">
-                                <input type="hidden" name="stage" value="1"/>
                                 <fieldset title="You must be logged in">
                                     <button type="submit">Checkout</button>
                                 </fieldset>

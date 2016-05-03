@@ -61,7 +61,6 @@ function calculatePrice(id, count) {
     cartSumContainer.setPrice(totalPrice - orderedItemsSum + newOrderedItemsSum)
 }
 
-
 //DELETE CART ITEM
 $('.cart_quantity_delete').click(function() {
     var link = $(this);

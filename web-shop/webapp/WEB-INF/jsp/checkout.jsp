@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="u" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html lang="en">
 <u:head title="Checkout" />
 <body>
@@ -10,7 +11,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/home"><img src="<c:url value="resources/images/book.gif" />" alt="home" width="139"
+                        <a href="/home"><img src="<spring:url value="resources/images/book.gif" />" alt="home" width="139"
                                              hight="39"/></a>
                     </div>
                     <%@include file="../jspf/lang.jspf" %>

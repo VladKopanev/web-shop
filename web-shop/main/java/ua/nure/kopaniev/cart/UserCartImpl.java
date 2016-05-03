@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 import ua.nure.kopaniev.bean.Item;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Map;
 
 @Service
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class UserCartImpl implements UserCart {
+public class UserCartImpl implements UserCart, Serializable {
     private Map<Item, Long> items = new LinkedHashMap<>();
 
     @Override

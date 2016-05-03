@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <div class="btn-group pull-right">
     <div class="btn-group">
         <spring:url value="/resources/js/locales.js" var="locales" />

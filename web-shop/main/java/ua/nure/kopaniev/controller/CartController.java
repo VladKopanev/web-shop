@@ -65,16 +65,16 @@ public class CartController {
     }
 
     @RequestMapping(value = "/checkout", method = RequestMethod.GET)
-    public String checkout() {
+    public ModelAndView checkout() {
         log.info("::checkout()");
-        return "checkout";
+        return new ModelAndView("checkout").addObject("userCart", userCart);
     }
 
     @RequestMapping(value = "/checkout", method = RequestMethod.POST)
-    public String doCheckout() {
+    public ModelAndView doCheckout() {
         log.info("::doCheckout()");
 
-        return "checkout";
+        return new ModelAndView("checkout").addObject("userCart", userCart);
     }
 
 }
