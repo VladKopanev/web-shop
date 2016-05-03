@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a52c04b-3f4e-459f-ae73-af1baa8d3496" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/resources/js/cart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/cart/UserCartImpl.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/cart/UserCartImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/CartController.java" afterPath="$PROJECT_DIR$/main/java/ua/nure/kopaniev/controller/CartController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/jspf/cartItems.jspf" afterPath="$PROJECT_DIR$/webapp/WEB-INF/jspf/cartItems.jspf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/jspf/scripts.jspf" afterPath="$PROJECT_DIR$/webapp/WEB-INF/jspf/scripts.jspf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/jspf/shopItems.jspf" afterPath="$PROJECT_DIR$/webapp/WEB-INF/jspf/shopItems.jspf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/security-context.xml" afterPath="$PROJECT_DIR$/webapp/WEB-INF/security-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/resources/js/cart.js" afterPath="$PROJECT_DIR$/webapp/resources/js/cart.js" />
     </list>
     <ignored path="web-shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,8 +87,8 @@
       <file leaf-file-name="cartItems.jspf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/jspf/cartItems.jspf">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+            <state vertical-scroll-proportion="-2.4230769">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -102,8 +97,8 @@
       <file leaf-file-name="cart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/resources/js/cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5014749">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.40117994">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -1406,7 +1401,7 @@
       <workItem from="1461867725532" duration="15000" />
       <workItem from="1462028561164" duration="6692000" />
       <workItem from="1462179527866" duration="7513000" />
-      <workItem from="1462221686835" duration="6829000" />
+      <workItem from="1462221686835" duration="10966000" />
     </task>
     <task id="LOCAL-00001" summary="Another minor fix commit.">
       <created>1460900658963</created>
@@ -1444,11 +1439,17 @@
       <option name="project" value="LOCAL" />
       <updated>1462187356069</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add ajax calls in cart(clear, add, count up, count down)">
+      <created>1462265305132</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1462265305132</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117580000" />
+    <option name="totallyTimeSpent" value="121717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1504,7 +1505,8 @@
     <MESSAGE value="Another portion of refactoring." />
     <MESSAGE value="Add spray's sample module." />
     <MESSAGE value="Replace unnecessary jsp tags with jsp fragment files, modify ItemDAO to build filtering query." />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace unnecessary jsp tags with jsp fragment files, modify ItemDAO to build filtering query." />
+    <MESSAGE value="Add ajax calls in cart(clear, add, count up, count down)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ajax calls in cart(clear, add, count up, count down)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1517,13 +1519,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.1.RELEASE/spring-web-4.1.1.RELEASE-sources.jar!/org/springframework/http/HttpEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/java/ua/nure/kopaniev/service/orders/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1902,18 +1897,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/resources/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3461537">
+          <caret line="1611" column="24" selection-start-line="1611" selection-start-column="24" selection-end-line="1611" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/jspf/cartItems.jspf">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+        <state vertical-scroll-proportion="-2.4230769">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/resources/js/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5014749">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.40117994">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -27,7 +27,7 @@
                         <tbody>
                         <c:forEach items="${userCart.items}" var="item">
                             <c:set var="itemCount" scope="request" value="${userCart.getCountOfItems(item)}"/>
-                            <tr>
+                            <tr itemId="${item.id}">
                                 <td class="cart_product">
                                     <a href=""><img src="<spring:url value="resources/images/book.gif" var="book"/>" alt="" width="268" height="249"></a>
                                 </td>
@@ -36,7 +36,7 @@
                                     <p>ID: ${item.id}</p>
                                 </td>
                                 <td class="cart_price">
-                                    <p>$ ${item.price}</p>
+                                    <p>${item.price} $</p>
                                 </td>
                                 <td class="cart_quantity">
                                     <div class="cart_quantity_button" id="cartQuantity">
@@ -46,7 +46,7 @@
                                     </div>
                                 </td>
                                 <td class="cart_total">
-                                    <p class="cart_total_price">$ ${itemCount * item.price}</p>
+                                    <p class="cart_total_price">${itemCount * item.price} $</p>
                                 </td>
                                 <td class="cart_delete">
                                     <a class="cart_quantity_delete" href="/cart/delete/${item.id}"><i class="fa fa-times"></i></a>
@@ -59,7 +59,7 @@
                             <td> </td>
                             <td> </td>
                             <td class="cart_total">
-                                <p class="cart_total_price">$ ${userCart.getSumOfItems()}</p>
+                                <p class="cart_total_price" id="cartSum">${userCart.getSumOfItems()} $</p>
                             </td>
                             <td><form method="GET" action="/cart/checkout">
                                 <input type="hidden" name="stage" value="1"/>
