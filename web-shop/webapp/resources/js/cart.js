@@ -61,6 +61,25 @@ function calculatePrice(id, count) {
     cartSumContainer.setPrice(totalPrice - orderedItemsSum + newOrderedItemsSum)
 }
 
+
+//DELETE CART ITEM
+$('.cart_quantity_delete').click(function() {
+    var link = $(this);
+    var id = link.attr("itemId");
+    $.ajax({
+        type: "DELETE",
+        url: "/cart/delete/{id}".supplant({id: id}),
+        success: function (result) {
+            var itemRow = $('tr[itemId="'+id+'"]');
+            var orderedItemsSum = itemRow.find('.cart_total_price').getPrice();
+            var cartSumContainer = $('#cartSum');
+            var totalPrice = cartSumContainer.getPrice();
+            cartSumContainer.setPrice(totalPrice - orderedItemsSum);
+            itemRow.remove()
+        }
+    })
+});
+
 //ADD TO CART
 $('[name=addToCart]').click(function () {
     var btn = $(this);

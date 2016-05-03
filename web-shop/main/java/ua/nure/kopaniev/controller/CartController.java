@@ -50,6 +50,7 @@ public class CartController {
         userCart.decrease(id);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     private void delete(@PathVariable long id) {
         log.info("::delete({})", id);
