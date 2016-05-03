@@ -9,7 +9,6 @@
 <spring:url value="/resources/js/jquery.validation.js" var="jqueryValidation"/>
 <spring:url value="/resources/js/popup.js" var="popup"/>
 <spring:url value="/resources/js/price-range.js" var="range"/>
-
 <script src="${sort}"></script>
 <script src="${range}"></script>
 <script src="${jquery}"></script>
@@ -20,3 +19,4 @@
 <script src="${validationJs}"></script>
 <script src="${jqueryValidation}"></script>
 <script src="${popup}"></script>
+<script src="<spring:url value="/resources/js/cart.js" />"></script>

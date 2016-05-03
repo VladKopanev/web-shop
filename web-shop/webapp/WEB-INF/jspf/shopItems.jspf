@@ -10,10 +10,10 @@
                 <div class="product-image-wrapper">
                     <div class="single-products">
                         <div class="productinfo text-center">
-                            <img src="<c:url value="resources/images/book.gif" />" alt="" width="268" height="249"/>
+                            <img src="<spring:url value="resources/images/book.gif" />" alt="" width="268" height="249"/>
                             <h2>$ ${item.price}</h2>
                             <p>${item.name}</p>
-                            <a href="<c:url value="/cart/add/${item.id}"/>" class="btn btn-default add-to-cart">
+                            <a href="#" name="addToCart" itemId="${item.id}" class="btn btn-default add-to-cart">
                                 <i class="fa fa-shopping-cart"></i>Add to cart
                             </a>
                         </div>
@@ -34,7 +34,7 @@
                                     </c:otherwise>
                                 </c:choose></p>
 
-                                <a href="<c:url value="/cart/add/${item.id}"/>"
+                                <a href="#" name="addToCart" itemId="${item.id}"
                                    class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart
                                 </a>
                             </div>

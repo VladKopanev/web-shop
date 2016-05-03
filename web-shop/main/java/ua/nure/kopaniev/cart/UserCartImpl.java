@@ -13,7 +13,7 @@ import java.util.Map;
 @Service
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class UserCartImpl implements UserCart {
-    Map<Item, Long> items = new LinkedHashMap<>();
+    private Map<Item, Long> items = new LinkedHashMap<>();
 
     @Override
     public void add(Item item) {

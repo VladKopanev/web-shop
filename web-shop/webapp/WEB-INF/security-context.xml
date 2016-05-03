@@ -6,7 +6,8 @@
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http auto-config="true">
+    <http pattern="/cart**" security="none" />
+    <http pattern="/order" auto-config="true">
         <intercept-url pattern="/admin**" access="ROLE_USER" />
         <form-login login-page="/jsp/login.jsp"
                     default-target-url="/jsp/index.jsp"
@@ -16,6 +17,7 @@
         <csrf/>
         <logout logout-success-url="/jsp/login.jsp" />
     </http>
+
 
     <authentication-manager>
         <authentication-provider>

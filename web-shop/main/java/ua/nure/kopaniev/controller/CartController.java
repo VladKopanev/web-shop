@@ -2,10 +2,13 @@ package ua.nure.kopaniev.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.servlet.ModelAndView;
 import ua.nure.kopaniev.cart.UserCart;
 import ua.nure.kopaniev.service.items.ItemService;
 
@@ -21,24 +24,27 @@ public class CartController {
     private UserCart userCart;
 
     @RequestMapping
-    public String getCart() {
+    public ModelAndView getCart() {
         log.info("::getCart()");
-        return "cart";
+        return new ModelAndView("cart").addObject("userCart", userCart);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/add/{id}", method = RequestMethod.POST)
     private void add(@PathVariable long id) {
         log.info("::add({})", id);
         userCart.add(itemService.getItem(id));
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/countUp/{id}", method = RequestMethod.PUT)
     private void countUp(@PathVariable long id) {
         log.info("::countUp({})", id);
         userCart.increase(id);
     }
 
-    @RequestMapping(value = "/countDown/{id}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value = "/countDown/{id}", method = RequestMethod.PUT)
     private void countDown(@PathVariable long id) {
         log.info("::countDown({})", id);
         userCart.decrease(id);
@@ -50,6 +56,7 @@ public class CartController {
         userCart.remove(id);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/clear", method = RequestMethod.DELETE)
     private void clear() {
         log.info("::clear()");
