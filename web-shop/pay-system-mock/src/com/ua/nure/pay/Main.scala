@@ -4,9 +4,6 @@ import akka.actor.{Props, ActorSystem}
 import akka.io.IO
 import spray.can.Http
 
-/**
-  * Created by Влад on 18.04.2016.
-  */
 object Main extends App {
   val serviceName = "pay-system-service"
   implicit val system = ActorSystem(serviceName)

@@ -73,7 +73,6 @@ public class CartController {
     @RequestMapping(value = "/checkout", method = RequestMethod.POST)
     public ModelAndView doCheckout() {
         log.info("::doCheckout()");
-
         return new ModelAndView("checkout").addObject("userCart", userCart);
     }
 

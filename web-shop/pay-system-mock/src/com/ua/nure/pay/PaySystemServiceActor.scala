@@ -3,9 +3,6 @@ package com.ua.nure.pay
 import akka.actor.Actor
 import spray.routing.HttpService
 
-/**
-  * Created by Влад on 18.04.2016.
-  */
 class PaySystemServiceActor extends Actor with PaySystemRoute {
   def receive = runRoute(route)
 

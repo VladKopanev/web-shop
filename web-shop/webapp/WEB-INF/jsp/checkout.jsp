@@ -12,7 +12,7 @@
                 <div class="col-sm-4">
                     <div class="logo pull-left">
                         <a href="/home"><img src="<spring:url value="resources/images/book.gif" />" alt="home" width="139"
-                                             hight="39"/></a>
+                                             height="39"/></a>
                     </div>
                     <%@include file="../jspf/lang.jspf" %>
                 </div>

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import ua.nure.kopaniev.bean.Order;
 import ua.nure.kopaniev.util.AppException;
 
+import java.util.Date;
 import java.util.List;
 
 @Slf4j
@@ -23,7 +24,7 @@ public class OrderDAO implements OrderRepository {
     public void addOrders(List<Order> orders) {
         log.info("::addOrder({})", orders.toString());
 
-        val sql = "INSERT INTO 'order'(id_user, id_item) VALUES (:id_user, :id_item)";
+        val sql = "INSERT INTO `order`(id_user, id_item, date) VALUES (:idUser, :idItem, :date)";
 
         SqlParameterSource[] sps = orders.stream()
                 .map(this::addToSource)
@@ -33,7 +34,8 @@ public class OrderDAO implements OrderRepository {
     }
 
     private SqlParameterSource addToSource(Order order) {
-        return new MapSqlParameterSource("id_item", order.getItemId())
-                .addValue("id_user", order.getUserId());
+        return new MapSqlParameterSource("idUser", order.getItemId())
+                .addValue("idItem", order.getUserId())
+                .addValue("date", new Date());
     }
 }

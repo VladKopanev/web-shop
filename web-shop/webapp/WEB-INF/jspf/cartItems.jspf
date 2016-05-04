@@ -1,3 +1,4 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <section id="cart_items">
     <div class="container">
         <div class="breadcrumbs">
@@ -21,7 +22,9 @@
                             <td class="price">Price</td>
                             <td class="quantity">Quantity</td>
                             <td class="total">Total</td>
-                            <td><button id="clear">Clear</button></td>
+                            <td>
+                                <button id="clear">Clear</button>
+                            </td>
                         </tr>
                         </thead>
                         <tbody>
@@ -29,7 +32,8 @@
                             <c:set var="itemCount" scope="request" value="${userCart.getCountOfItems(item)}"/>
                             <tr itemId="${item.id}">
                                 <td class="cart_product">
-                                    <a href=""><img src="<spring:url value="resources/images/book.gif" var="book"/>" alt="" width="268" height="249"></a>
+                                    <a href=""><img src="<spring:url value="resources/images/book.gif" var="book"/>"
+                                                    alt="" width="268" height="249"></a>
                                 </td>
                                 <td class="cart_description">
                                     <h4><a href="">${item.name}</a></h4>
@@ -40,32 +44,37 @@
                                 </td>
                                 <td class="cart_quantity">
                                     <div class="cart_quantity_button" id="cartQuantity">
-                                        <a class="cart_quantity_up" href="#cartQuantity"  itemId="${item.id}"> + </a>
-                                        <p class="cart_quantity_input" id="itemCount" >${itemCount}</p>
-                                        <a class="cart_quantity_down" href="#cartQuantity"  itemId="${item.id}"> - </a>
+                                        <a class="cart_quantity_up" href="#cartQuantity" itemId="${item.id}"> + </a>
+                                        <p class="cart_quantity_input" id="itemCount">${itemCount}</p>
+                                        <a class="cart_quantity_down" href="#cartQuantity" itemId="${item.id}"> - </a>
                                     </div>
                                 </td>
                                 <td class="cart_total">
                                     <p class="cart_total_price">${itemCount * item.price} $</p>
                                 </td>
                                 <td class="cart_delete">
-                                    <a class="cart_quantity_delete"  href="#" itemId="${item.id}"><i class="fa fa-times"></i></a>
+                                    <a class="cart_quantity_delete" href="#" itemId="${item.id}"><i
+                                            class="fa fa-times"></i></a>
                                 </td>
                             </tr>
                         </c:forEach>
                         <tr>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td class="cart_total">
                                 <p class="cart_total_price" id="cartSum">${userCart.getSumOfItems()} $</p>
                             </td>
-                            <td><form method="GET" action="/cart/checkout">
-                                <fieldset title="You must be logged in">
-                                    <button type="submit">Checkout</button>
-                                </fieldset>
-                            </form></td>
+                            <td>
+                                <form method="GET" action="/cart/checkout">
+                                    <sec:authorize access="isAuthenticated()">
+                                        <fieldset title="You must be logged in">
+                                            <button type="submit">Checkout</button>
+                                        </fieldset>
+                                    </sec:authorize>
+                                </form>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -73,4 +82,5 @@
             </c:choose>
         </div>
     </div>
-</section> <!--/#cart_items-->
+</section>
+<!--/#cart_items-->

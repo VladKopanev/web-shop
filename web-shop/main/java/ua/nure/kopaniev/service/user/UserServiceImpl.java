@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import ua.nure.kopaniev.bean.User;
 import ua.nure.kopaniev.repository.UserRepository;
 
-@Service
+@Service("userService")
 public class UserServiceImpl implements UserDetailsService, UserService {
 
     @Autowired

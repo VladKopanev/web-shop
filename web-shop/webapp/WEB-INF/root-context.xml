@@ -13,18 +13,20 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="ua.nure.kopaniev" />
+    <context:component-scan base-package="ua.nure.kopaniev"/>
 
     <mvc:annotation-driven/>
 
-    <tx:annotation-driven />
+    <tx:annotation-driven proxy-target-class="true"
+                          transaction-manager="transactionManager" />
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
 
     <context:property-placeholder location="classpath:application.properties, file:${connection.config.location}"/>
 
-    <mvc:resources mapping="/resources/**" location="/resources/" />
-
-
-    <bean id="captchaImpl" class="com.github.cage.Cage" />
+    <bean id="captchaImpl" class="com.github.cage.Cage"/>
 
     <bean id="rulesContainer" class="ua.nure.kopaniev.util.validation.SignupRulesContainer">
         <property name="rules">
@@ -37,13 +39,13 @@
         </property>
     </bean>
 
-    <bean id="nameRule" class="ua.nure.kopaniev.util.validation.rules.NameRule" />
-    <bean id="surnameRule" class="ua.nure.kopaniev.util.validation.rules.SurnameRule" />
-    <bean id="emailRule" class="ua.nure.kopaniev.util.validation.rules.EmailRule" />
-    <bean id="passwordRule" class="ua.nure.kopaniev.util.validation.rules.PasswordRule" />
+    <bean id="nameRule" class="ua.nure.kopaniev.util.validation.rules.NameRule"/>
+    <bean id="surnameRule" class="ua.nure.kopaniev.util.validation.rules.SurnameRule"/>
+    <bean id="emailRule" class="ua.nure.kopaniev.util.validation.rules.EmailRule"/>
+    <bean id="passwordRule" class="ua.nure.kopaniev.util.validation.rules.PasswordRule"/>
 
     <bean id="template" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
-        <constructor-arg name="dataSource" ref="dataSource" />
+        <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
     <bean id="dataSource"
@@ -53,13 +55,4 @@
         <property name="username" value="${datasource.username}"/>
         <property name="password" value="${datasource.password}"/>
     </bean>
-
-    <bean id="viewResolver"
-          class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-        <property name="viewClass"
-                  value="org.springframework.web.servlet.view.JstlView" />
-        <property name="prefix" value="${view.prefix}" />
-        <property name="suffix" value="${view.suffix}" />
-    </bean>
-
 </beans>

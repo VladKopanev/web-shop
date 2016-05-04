@@ -6,25 +6,26 @@
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http pattern="/cart**" security="none" />
-    <http pattern="/order" auto-config="true">
-        <intercept-url pattern="/admin**" access="ROLE_USER" />
-        <form-login login-page="/jsp/login.jsp"
-                    default-target-url="/jsp/index.jsp"
-                    authentication-failure-url="/jsp/login.jsp?error=true"
-                    username-parameter="email"
-                    password-parameter="pass"/>
-        <csrf/>
-        <logout logout-success-url="/jsp/login.jsp" />
+    <http pattern="/resources/**" security="none"/>
+
+    <http use-expressions="true">
+        <intercept-url pattern="/login**" access="isAnonymous()"/>
+        <intercept-url pattern="/signup**" access="isAnonymous()"/>
+        <intercept-url pattern="/**" access="isAuthenticated()"/>
+        <intercept-url pattern="/cart**" access="permitAll" />
+        <form-login
+                login-page='/login'
+                default-target-url="/home"
+                authentication-failure-url="/login?error=true"
+                username-parameter="email"
+                password-parameter="pass"
+        />
+        <csrf disabled="true"/>
+        <logout logout-success-url="/login"/>
     </http>
 
-
     <authentication-manager>
-        <authentication-provider>
-            <user-service>
-                <user name="admin@mail.com" password="root" authorities="ROLE_USER" />
-            </user-service>
-        </authentication-provider>
+        <authentication-provider user-service-ref="userService"/>
     </authentication-manager>
 
 </beans:beans>

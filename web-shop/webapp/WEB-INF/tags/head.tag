@@ -13,7 +13,6 @@
     <spring:url value="/resources/css/price-range.css" var="priceRange"/>
     <spring:url value="/resources/css/animate.css" var="animate"/>
     <spring:url value="/resources/css/responsive.css" var="responsive"/>
-    <spring:url value="/resources/css/html5shiv.js" var="html5shiv"/>
 
     <link href="${bootstrap}" rel="stylesheet">
     <link href="${fontAwesome}" rel="stylesheet">
@@ -21,6 +20,5 @@
     <link href="${animate}" rel="stylesheet">
     <link href="${mainCss}" rel="stylesheet">
     <link href="${responsive}" rel="stylesheet">
-    <script src="${html5shiv}"></script>
 
 </head>
