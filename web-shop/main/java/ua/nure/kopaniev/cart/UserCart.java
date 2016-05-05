@@ -20,7 +20,7 @@ public interface UserCart {
 
     List<Item> getItems();
 
-    long getCountOfItems(Item item);
+    int getCountOfItems(Item item);
 
     long getCount();
 

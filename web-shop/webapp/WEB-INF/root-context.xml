@@ -15,6 +15,8 @@
 
     <context:component-scan base-package="ua.nure.kopaniev"/>
 
+    <context:property-placeholder location="classpath:application.properties, file:${connection.config.location}"/>
+
     <mvc:annotation-driven/>
 
     <tx:annotation-driven proxy-target-class="true"
@@ -24,7 +26,14 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
-    <context:property-placeholder location="classpath:application.properties, file:${connection.config.location}"/>
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <constructor-arg>
+            <list>
+                <bean class="org.springframework.http.converter.FormHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            </list>
+        </constructor-arg>
+    </bean>
 
     <bean id="captchaImpl" class="com.github.cage.Cage"/>
 

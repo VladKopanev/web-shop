@@ -24,18 +24,21 @@ public class OrderDAO implements OrderRepository {
     public void addOrders(List<Order> orders) {
         log.info("::addOrder({})", orders.toString());
 
-        val sql = "INSERT INTO `order`(id_user, id_item, date) VALUES (:idUser, :idItem, :date)";
+        val sql = "INSERT INTO `order`(id_user, id_item, quantity,  date) " +
+                "VALUES (:idUser, :idItem, :quantity, :date)";
 
+        final Date orderDate = new Date();
         SqlParameterSource[] sps = orders.stream()
-                .map(this::addToSource)
+                .map(order -> addToSource(order, orderDate))
                 .toArray(SqlParameterSource[]::new);
 
         template.batchUpdate(sql, sps);
     }
 
-    private SqlParameterSource addToSource(Order order) {
-        return new MapSqlParameterSource("idUser", order.getItemId())
-                .addValue("idItem", order.getUserId())
-                .addValue("date", new Date());
+    private SqlParameterSource addToSource(Order order, Date date) {
+        return new MapSqlParameterSource("idUser", order.getUserId())
+                .addValue("idItem", order.getItemId())
+                .addValue("quantity", order.getQuantity())
+                .addValue("date", date);
     }
 }

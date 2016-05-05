@@ -6,5 +6,8 @@ import ua.nure.kopaniev.util.AppException;
  * Ordering service.
  */
 public interface OrderService {
-    void makeOrder() throws AppException;
+    /**
+     * Returns string response represantation.
+     * */
+    String makeOrder() throws AppException;
 }
