@@ -41,7 +41,6 @@ public class OrderServiceImpl implements OrderService {
 
     private static final String CASH_PARAMETER_NAME = "cash=";
 
-
     @Override
     @Transactional
     public String makeOrder() {

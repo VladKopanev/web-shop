@@ -3,11 +3,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html lang="en">
-<u:head title="Cart" />
+<u:head title="Cart"/>
 <!--/head-->
 <body>
+<spring:url value="resources/images/book.gif" var="book"/>
 <header id="header"><!--header-->
-    <spring:url value="resources/images/book.gif" var="book"/>
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">

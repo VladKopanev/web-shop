@@ -28,11 +28,12 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <spring:url value="resources/images/book.gif" var="book"/>
                         <c:forEach items="${userCart.items}" var="item">
                             <c:set var="itemCount" scope="request" value="${userCart.getCountOfItems(item)}"/>
                             <tr itemId="${item.id}">
                                 <td class="cart_product">
-                                    <a href=""><img src="<spring:url value="resources/images/book.gif" var="book"/>"
+                                    <a href=""><img src="${book}"
                                                     alt="" width="268" height="249"></a>
                                 </td>
                                 <td class="cart_description">
