@@ -21,6 +21,43 @@
 
     <tx:annotation-driven proxy-target-class="true"
                           transaction-manager="transactionManager" />
+
+    <!--        EMAIL               -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.hostname.com" />
+        <property name="port" value="25" />
+        <property name="protocol" value="smtp" />
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">false</prop>
+                <prop key="mail.smtp.starttls.enable">false</prop>
+                <prop key="mail.smtp.ehlo">false</prop> <!-- may be true in your application-->
+                <prop key="mail.debug">true</prop>
+            </props>
+        </property>
+    </bean>
+    <!--  THYMELEAF-SPECIFIC ARTIFACTS                                    -->
+    <!--  TemplateEngine <- TemplateResolver <- ViewResolver              -->
+
+    <!-- Email Templates stored in DB2 EMAIL_TEXT table, this is defined here so classes not annotated as controller can make use of it -->
+    <bean id="dbTemplateResolver" class="ua.nure.kopaniev.email.DbTemplateResolver">
+        <property name="order" value="1"/>
+        <property name="cacheable" value="false" />
+    </bean>
+
+    <bean id="emailTemplateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolvers">
+            <set>
+                <ref bean="dbTemplateResolver"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="emailTemplateEngine" />
+    </bean>
+    <!--        EMAIL               -->
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
