@@ -1,6 +1,5 @@
 package ua.nure.kopaniev.service.orders;
 
-import lombok.SneakyThrows;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,12 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 import ua.nure.kopaniev.bean.EmailData;
 import ua.nure.kopaniev.bean.Order;
+import ua.nure.kopaniev.bean.User;
 import ua.nure.kopaniev.cart.UserCart;
 import ua.nure.kopaniev.repository.OrderRepository;
 import ua.nure.kopaniev.service.EmailService;
 import ua.nure.kopaniev.service.user.UserService;
 
-import javax.mail.MessagingException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -51,17 +50,20 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     @Transactional
-    @SneakyThrows(MessagingException.class)
     public String makeOrder() {
-        long userId = userService.getCurrentUser().getId();
+        User user = userService.getCurrentUser();
+        long userId = user.getId();
         List<Order> orders = userCart.getItems().stream()
                 .map(item -> new Order(userId, item.getId(), userCart.getCountOfItems(item)))
                 .collect(Collectors.toList());
         repository.addOrders(orders);
         val emailData = new EmailData();
         emailData.setOrderedSum(String.valueOf(userCart.getSumOfItems()));
-        emailService.sendNotificationToCustomer("ivengo53@gmail.com", emailData);
-        return makePayment();
+        emailData.setCustomerName(user.getFullname());
+        String paymentSystemResponse = makePayment();
+        emailService.sendNotificationToCustomer(user.getEmail(), emailData);
+        emailService.sendNotificationToManager(emailData);
+        return paymentSystemResponse;
     }
 
     //returns response from payment system

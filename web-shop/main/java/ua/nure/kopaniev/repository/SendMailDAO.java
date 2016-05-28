@@ -5,7 +5,6 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 import ua.nure.kopaniev.bean.EmailText;
-import ua.nure.kopaniev.bean.EmailType;
 
 @Repository
 public class SendMailDAO {

@@ -30,9 +30,8 @@
         <property name="host" value="smtp.gmail.com"/>
         <property name="port" value="587"/>
         <property name="username" value="${app.email.login}"/>
-        <property name="password" value="${app.emai.pass}"/>
+        <property name="password" value="${app.email.pass}"/>
 
-        <!-- The name of the property, following JavaBean naming conventions -->
         <property name="javaMailProperties">
             <props>
                 <prop key="mail.transport.protocol">smtp</prop>

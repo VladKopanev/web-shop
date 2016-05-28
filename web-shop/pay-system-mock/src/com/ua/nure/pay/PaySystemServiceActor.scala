@@ -17,6 +17,7 @@ trait PaySystemRoute extends HttpService {
         optionalHeaderValueByName("Referer") { refererLocation =>
           formFields('cash) { cash =>
             complete {
+              Thread.sleep(1000)
               <body>
                 <h1>Payment success!</h1>
                 <h1>{cash}$ </h1>
