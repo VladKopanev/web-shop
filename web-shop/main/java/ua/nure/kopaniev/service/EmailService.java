@@ -1,13 +1,16 @@
 package ua.nure.kopaniev.service;
 
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import ua.nure.kopaniev.bean.EmailText;
+import ua.nure.kopaniev.bean.EmailType;
 import ua.nure.kopaniev.repository.SendMailDAO;
 
 import javax.mail.MessagingException;
@@ -25,30 +28,28 @@ public class EmailService {
     @Autowired
     private SendMailDAO dao;
 
-    private String viewName;
+    private String viewName = EmailType.CUSTOMER_MAIL.getName();
 
-    //TODO refactor, make it work
     public void sendNotificationToCustomer(String email, Object data) throws MessagingException {
         //Prepare the evaluation context
-        final Context ctx = new Context();
+        val ctx = new Context();
         ctx.setVariable("imageResourceName", "logo.jpg"); //Set file name so it can be referenced from html
         ctx.setVariable("emailDataObject", data);
 
-        EmailText et = dao.getTemplateByType(viewName);
+        val et = dao.getTemplateByType(viewName);
 
         if(et == null){
-            throw new RuntimeException("Null value returned when selecting EMAIL_TYPE: " + viewName);
+            throw new IllegalArgumentException("No matching EMAIL_TYPE: " + viewName);
         }
 
         // Prepare message using a Spring helper
-        final MimeMessage mimeMessage = this.mailSender.createMimeMessage();
-        final MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8"); // true = multipart
+        val mimeMessage = this.mailSender.createMimeMessage();
+        val message = new MimeMessageHelper(mimeMessage, true, "UTF-8"); // true = multipart
         message.setSubject(et.getEmailSubject());
-        message.setFrom(getDefaultAddress());
-        message.setTo(recipientEmail);
+        message.setTo(email);
 
         // Create the HTML body using Thymeleaf
-        final String htmlContent = this.templateEngine.process("db2:" + viewName, ctx);
+        val htmlContent = templateEngine.process(viewName, ctx);
 
         message.setText(htmlContent, true); // true = isHtml
 

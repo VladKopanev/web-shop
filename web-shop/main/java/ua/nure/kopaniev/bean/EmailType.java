@@ -1,7 +1,5 @@
 package ua.nure.kopaniev.bean;
 
-import java.util.Arrays;
-
 public enum EmailType {
     CUSTOMER_MAIL(1, "customer"),
     MANAGER_MAIL(2, "manager");

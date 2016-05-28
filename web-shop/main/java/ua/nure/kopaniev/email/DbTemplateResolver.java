@@ -21,7 +21,7 @@ public class DbTemplateResolver extends TemplateResolver {
 
     public DbTemplateResolver() {
         setResourceResolver(new DbResourceResolver());
-        val p = new HashSet<>();
+        HashSet<String> p = new HashSet<>();
         p.add("*");
         setResolvablePatterns(p);
     }

@@ -15,35 +15,38 @@
 
     <context:component-scan base-package="ua.nure.kopaniev"/>
 
-    <context:property-placeholder location="classpath:application.properties, file:${connection.config.location}"/>
+    <context:property-placeholder location="classpath:application.properties,
+     file:${connection.config.location},
+     file:${email.config.location}"/>
 
     <mvc:annotation-driven/>
 
     <tx:annotation-driven proxy-target-class="true"
-                          transaction-manager="transactionManager" />
+                          transaction-manager="transactionManager"/>
 
     <!--        EMAIL               -->
+
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-        <property name="host" value="smtp.hostname.com" />
-        <property name="port" value="25" />
-        <property name="protocol" value="smtp" />
+        <property name="host" value="smtp.gmail.com"/>
+        <property name="port" value="587"/>
+        <property name="username" value="${app.email.login}"/>
+        <property name="password" value="${app.emai.pass}"/>
+
+        <!-- The name of the property, following JavaBean naming conventions -->
         <property name="javaMailProperties">
             <props>
                 <prop key="mail.transport.protocol">smtp</prop>
-                <prop key="mail.smtp.auth">false</prop>
-                <prop key="mail.smtp.starttls.enable">false</prop>
-                <prop key="mail.smtp.ehlo">false</prop> <!-- may be true in your application-->
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
                 <prop key="mail.debug">true</prop>
             </props>
         </property>
     </bean>
-    <!--  THYMELEAF-SPECIFIC ARTIFACTS                                    -->
-    <!--  TemplateEngine <- TemplateResolver <- ViewResolver              -->
 
     <!-- Email Templates stored in DB2 EMAIL_TEXT table, this is defined here so classes not annotated as controller can make use of it -->
     <bean id="dbTemplateResolver" class="ua.nure.kopaniev.email.DbTemplateResolver">
         <property name="order" value="1"/>
-        <property name="cacheable" value="false" />
+        <property name="cacheable" value="false"/>
     </bean>
 
     <bean id="emailTemplateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
@@ -55,12 +58,12 @@
     </bean>
 
     <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
-        <property name="templateEngine" ref="emailTemplateEngine" />
+        <property name="templateEngine" ref="emailTemplateEngine"/>
     </bean>
     <!--        EMAIL               -->
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">

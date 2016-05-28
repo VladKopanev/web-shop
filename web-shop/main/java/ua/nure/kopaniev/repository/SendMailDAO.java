@@ -16,8 +16,7 @@ public class SendMailDAO {
     public static final String GET_TEMPLATE_BY_TYPE = "SELECT * FROM mail_template WHERE email_type = :type";
 
     public EmailText getTemplateByType(String resourceName) {
-        int emailTypeId = EmailType.getTypeByName(resourceName).getId();
-        return template.queryForObject(GET_TEMPLATE_BY_TYPE, new MapSqlParameterSource("type", emailTypeId),
+        return template.queryForObject(GET_TEMPLATE_BY_TYPE, new MapSqlParameterSource("type", resourceName),
                 (rs, i) -> new EmailText(
                 rs.getString("email_type"),
                 rs.getString("email_subject"),
