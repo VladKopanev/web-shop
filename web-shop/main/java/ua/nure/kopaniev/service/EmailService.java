@@ -14,7 +14,6 @@ import ua.nure.kopaniev.bean.EmailData;
 import ua.nure.kopaniev.bean.EmailType;
 import ua.nure.kopaniev.repository.SendMailDAO;
 
-import javax.mail.Message;
 import javax.mail.MessagingException;
 
 @Slf4j

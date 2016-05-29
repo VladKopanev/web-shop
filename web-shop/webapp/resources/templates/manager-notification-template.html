@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div>
+    User <h2 th:text="${emailDataObject.customerName}"></h2> created new order;
+</div>
+
+<h3>Ordered sum is</h3>
+<h3 th:text="${emailDataObject.orderedSum}"></h3>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+    <h3>Ваш заказ находится в обработке, вскоре наш менеджер с вами свяжется.</h3>
+    <h3>Сумма вашего заказа составит:</h3>
+    <h3 th:text="${emailDataObject.orderedSum}"></h3>
+</body>
+</html>

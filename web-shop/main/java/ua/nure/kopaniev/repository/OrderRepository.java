@@ -1,7 +1,6 @@
 package ua.nure.kopaniev.repository;
 
 import ua.nure.kopaniev.bean.Order;
-import ua.nure.kopaniev.util.AppException;
 
 import java.util.List;
 
@@ -9,5 +8,5 @@ import java.util.List;
  * Service for ordering items.
  */
 public interface OrderRepository {
-    void addOrders(List<Order> orders) throws AppException;
+    void addOrders(List<Order> orders);
 }
