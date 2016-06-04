@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import ua.nure.kopaniev.cart.UserCart;
-import ua.nure.kopaniev.service.orders.OrderService;
+import ua.nure.kopaniev.service.OrderService;
 
 @Slf4j
 @Controller

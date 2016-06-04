@@ -90,7 +90,7 @@
 
                         <span>
 								<input type="checkbox" class="checkbox" name="toysInfo"/>
-								Inform me about new toys
+								Inform me about new books
                         </span>
                         <br/>
                         <span>

@@ -1,4 +1,4 @@
-package ua.nure.kopaniev.service.user;
+package ua.nure.kopaniev.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -8,17 +8,15 @@ import ua.nure.kopaniev.bean.User;
 import ua.nure.kopaniev.repository.UserRepository;
 
 @Service("userService")
-public class UserServiceImpl implements UserDetailsService, UserService {
+public class UserService implements UserDetailsService {
 
     @Autowired
     private UserRepository repository;
 
-    @Override
     public void addUser(User user) {
         repository.addUser(user);
     }
 
-    @Override
     public User getUser(String email) {
         return loadUserByUsername(email);
     }

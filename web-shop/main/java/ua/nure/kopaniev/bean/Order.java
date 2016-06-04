@@ -3,6 +3,8 @@ package ua.nure.kopaniev.bean;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Order info bean.
@@ -11,12 +13,14 @@ import java.io.Serializable;
 public class Order implements Serializable {
     private long id;
     private long userId;
-    private long itemId;
-    private int quantity;
+    private Date date;
+    private List<OrderItem> orderItems;
 
-    public Order(long userId, long itemId, int quantity) {
+    public Order(long id, long userId, Date date) {
+        this.id = id;
         this.userId = userId;
-        this.itemId = itemId;
-        this.quantity = quantity;
+        this.date = date;
     }
+
+    public Order() {}
 }

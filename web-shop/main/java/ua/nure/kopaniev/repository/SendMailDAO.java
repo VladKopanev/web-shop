@@ -12,7 +12,7 @@ public class SendMailDAO {
     @Autowired
     private NamedParameterJdbcTemplate template;
 
-    public static final String GET_TEMPLATE_BY_TYPE = "SELECT * FROM mail_template WHERE email_type = :type";
+    private static final String GET_TEMPLATE_BY_TYPE = "SELECT * FROM mail_template WHERE email_type = :type";
 
     public EmailText getTemplateByType(String resourceName) {
         return template.queryForObject(GET_TEMPLATE_BY_TYPE, new MapSqlParameterSource("type", resourceName),

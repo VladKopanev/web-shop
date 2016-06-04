@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import ua.nure.kopaniev.bean.Order;
+import ua.nure.kopaniev.bean.OrderItem;
 
 import java.util.Date;
-import java.util.List;
 
 @Slf4j
 @Repository
@@ -19,25 +21,29 @@ public class OrderDAO implements OrderRepository {
     @Autowired
     private NamedParameterJdbcTemplate template;
 
+    private static final String INSERT_ORDER = "INSERT INTO order(id_user, date) VALUES (:idUser, :date)";
+    private static final String INSERT_ORDER_ITEM = "INSERT INTO order_item(order_id, item_id, quantity) " +
+                                                    "VALUES (:orderId, :itemId, :quantity)";
+
     @Override
-    public void addOrders(List<Order> orders) {
-        log.info("::addOrder({})", orders.toString());
+    public void addOrder(Order order) {
+        log.info("::addOrder({})", order.getOrderItems());
+        val orderDate = new Date();
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        template.update(INSERT_ORDER, new MapSqlParameterSource("idUser", order.getUserId())
+                .addValue("date", orderDate), keyHolder);
+        long orderId = (long)keyHolder.getKey();
 
-        val sql = "INSERT INTO `order`(id_user, id_item, quantity,  date) " +
-                "VALUES (:idUser, :idItem, :quantity, :date)";
-
-        final Date orderDate = new Date();
-        SqlParameterSource[] sps = orders.stream()
-                .map(order -> addToSource(order, orderDate))
+        SqlParameterSource[] params = order.getOrderItems().stream()
+                .map(orderItem -> addToSource(orderItem, orderId))
                 .toArray(SqlParameterSource[]::new);
 
-        template.batchUpdate(sql, sps);
+        template.batchUpdate(INSERT_ORDER_ITEM, params);
     }
 
-    private SqlParameterSource addToSource(Order order, Date date) {
-        return new MapSqlParameterSource("idUser", order.getUserId())
-                .addValue("idItem", order.getItemId())
-                .addValue("quantity", order.getQuantity())
-                .addValue("date", date);
+    private SqlParameterSource addToSource(OrderItem orderItem, long orderId) {
+        return new MapSqlParameterSource("orderId", orderId)
+                .addValue("itemId", orderItem.getItemId())
+                .addValue("quantity", orderItem.getQuantity());
     }
 }

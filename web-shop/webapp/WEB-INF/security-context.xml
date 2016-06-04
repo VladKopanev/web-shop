@@ -11,7 +11,7 @@
     <http use-expressions="true">
         <intercept-url pattern="/login**" access="isAnonymous()"/>
         <intercept-url pattern="/signup**" access="isAnonymous()"/>
-        <intercept-url pattern="/cart**" access="permitAll()" />
+        <intercept-url pattern="/cart/**" access="permitAll()" />
         <intercept-url pattern="/home**" access="permitAll()" />
         <intercept-url pattern="/shop**" access="permitAll()" />
         <intercept-url pattern="/**" access="isAuthenticated()"/>

@@ -1,4 +1,4 @@
-package ua.nure.kopaniev.service.orders;
+package ua.nure.kopaniev.service;
 
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +11,16 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 import ua.nure.kopaniev.bean.EmailData;
 import ua.nure.kopaniev.bean.Order;
+import ua.nure.kopaniev.bean.OrderItem;
 import ua.nure.kopaniev.bean.User;
 import ua.nure.kopaniev.cart.UserCart;
 import ua.nure.kopaniev.repository.OrderRepository;
-import ua.nure.kopaniev.service.EmailService;
-import ua.nure.kopaniev.service.user.UserService;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class OrderServiceImpl implements OrderService {
+public class OrderService {
 
     @Autowired
     private OrderRepository repository;
@@ -48,15 +47,17 @@ public class OrderServiceImpl implements OrderService {
 
     private static final String CASH_PARAMETER_NAME = "cash=";
 
-    @Override
     @Transactional
     public String makeOrder() {
         User user = userService.getCurrentUser();
         long userId = user.getId();
-        List<Order> orders = userCart.getItems().stream()
-                .map(item -> new Order(userId, item.getId(), userCart.getCountOfItems(item)))
+        List<OrderItem> orderItems = userCart.getItems().stream()
+                .map(item -> new OrderItem(item.getId(), userCart.getCountOfItems(item)))
                 .collect(Collectors.toList());
-        repository.addOrders(orders);
+        Order order = new Order();
+        order.setOrderItems(orderItems);
+        order.setUserId(userId);
+        repository.addOrder(order);
         val emailData = new EmailData();
         emailData.setOrderedSum(String.valueOf(userCart.getSumOfItems()));
         emailData.setCustomerName(user.getFullname());

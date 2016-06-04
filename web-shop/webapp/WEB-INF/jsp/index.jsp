@@ -66,8 +66,8 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="col-sm-6">
-                                <h1><span>Toy</span>-SHOP</h1>
-                                <h2>Bying toys in our shop you are guaranteed to get a quality product</h2>
+                                <h1><span>book</span>-SHOP</h1>
+                                <h2>Bying books in our shop you are guaranteed to get a quality product</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. </p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
@@ -80,8 +80,8 @@
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>Toy</span>-SHOP</h1>
-                                <h2>Our toys does not contain any harmful substances</h2>
+                                <h1><span>book</span>-SHOP</h1>
+                                <h2>Our books does not contain any harmful substances</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. </p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
@@ -93,8 +93,8 @@
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>Toy</span>-SHOP</h1>
-                                <h2>Free shipping over Ukraine on 3 toys or more</h2>
+                                <h1><span>book</span>-SHOP</h1>
+                                <h2>Free shipping over Ukraine on 3 books or more</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua. </p>
                                 <button type="button" class="btn btn-default get">Get it now</button>

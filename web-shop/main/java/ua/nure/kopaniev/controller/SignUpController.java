@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import ua.nure.kopaniev.bean.User;
-import ua.nure.kopaniev.service.captcha.CaptchaService;
-import ua.nure.kopaniev.service.user.UserService;
+import ua.nure.kopaniev.service.CaptchaService;
+import ua.nure.kopaniev.service.UserService;
 import ua.nure.kopaniev.util.validation.ValidationRulesContainer;
 import ua.nure.kopaniev.util.validation.rules.SignUpData;
 

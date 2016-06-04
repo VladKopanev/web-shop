@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import ua.nure.kopaniev.service.captcha.CaptchaService;
+import ua.nure.kopaniev.service.CaptchaService;
 
 import java.io.IOException;
 

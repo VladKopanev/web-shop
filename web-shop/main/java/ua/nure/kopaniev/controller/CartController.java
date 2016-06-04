@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 import ua.nure.kopaniev.cart.UserCart;
-import ua.nure.kopaniev.service.items.ItemService;
+import ua.nure.kopaniev.service.ItemService;
 
 @Slf4j
 @Controller

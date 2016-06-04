@@ -8,5 +8,5 @@ import java.util.List;
  * Service for ordering items.
  */
 public interface OrderRepository {
-    void addOrders(List<Order> orders);
+    void addOrder(Order order);
 }
