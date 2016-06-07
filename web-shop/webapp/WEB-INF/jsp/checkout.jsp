@@ -5,14 +5,14 @@
 <html lang="en">
 <u:head title="Checkout"/>
 <body>
-<spring:url value="resources/images/book.gif" var="book"/>
 <header id="header"><!--header-->
     <div class="header-middle"><!--header-middle-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/home"><img src="${book}" alt="home" width="139"
+
+                        <a href="/home"><img src="<c:url value="resources/images/book.gif" />" alt="home" width="139"
                                              height="39"/></a>
                     </div>
                     <%@include file="../jspf/lang.jspf" %>

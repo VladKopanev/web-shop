@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
@@ -51,13 +52,13 @@ public class OrderService {
     public String makeOrder() {
         User user = userService.getCurrentUser();
         long userId = user.getId();
-        List<OrderItem> orderItems = userCart.getItems().stream()
+        List<OrderItem> orderItems = userCart.getItems().parallelStream()
                 .map(item -> new OrderItem(item.getId(), userCart.getCountOfItems(item)))
                 .collect(Collectors.toList());
         Order order = new Order();
         order.setOrderItems(orderItems);
         order.setUserId(userId);
-        repository.addOrder(order);
+        asyncAddOrder(order);
         val emailData = new EmailData();
         emailData.setOrderedSum(String.valueOf(userCart.getSumOfItems()));
         emailData.setCustomerName(user.getFullname());
@@ -65,6 +66,11 @@ public class OrderService {
         emailService.sendNotificationToCustomer(user.getEmail(), emailData);
         emailService.sendNotificationToManager(emailData);
         return paymentSystemResponse;
+    }
+
+    @Async
+    private void asyncAddOrder(Order order) {
+        repository.addOrder(order);
     }
 
     //returns response from payment system

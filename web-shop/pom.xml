@@ -68,6 +68,12 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
         <!--    SPRING END    -->
 
         <!--    SPRING SECURITY START   -->
@@ -150,6 +156,11 @@
             <version>5.1.38</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.191</version>
+        </dependency>
         <!--    DATA SOURCE START   -->
 
         <!--    CAPTCHA START   -->

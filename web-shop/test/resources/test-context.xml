@@ -1,0 +1,101 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+    <context:property-placeholder location="classpath:application.properties,
+    classpath:test-properties.properties"/>
+
+    <context:component-scan base-package="ua.nure.kopaniev"/>
+
+    <mvc:annotation-driven/>
+
+    <tx:annotation-driven proxy-target-class="true"
+                          transaction-manager="transactionManager"/>
+
+    <!--        EMAIL               -->
+
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.ukr.net"/>
+        <property name="port" value="465"/>
+        <property name="username" value="kopaniev_dyploma@ukr.net"/>
+        <property name="password" value="dyploma777"/>
+
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.debug">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Email Templates stored in DB2 EMAIL_TEXT table, this is defined here so classes not annotated as controller can make use of it -->
+    <bean id="dbTemplateResolver" class="ua.nure.kopaniev.email.DbTemplateResolver">
+        <property name="order" value="1"/>
+        <property name="cacheable" value="false"/>
+    </bean>
+
+    <bean id="emailTemplateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolvers">
+            <set>
+                <ref bean="dbTemplateResolver"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+        <property name="templateEngine" ref="emailTemplateEngine"/>
+    </bean>
+    <!--        EMAIL               -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <constructor-arg>
+            <list>
+                <bean class="org.springframework.http.converter.FormHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="template" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <jdbc:embedded-database id="dataSource" type="H2">
+        <jdbc:script location="classpath:sql/create-test-db.sql" />
+        <jdbc:script location="classpath:sql/insert-test-data.sql" />
+    </jdbc:embedded-database>
+
+    <bean id="captchaImpl" class="com.github.cage.Cage"/>
+
+    <bean id="rulesContainer" class="ua.nure.kopaniev.util.validation.SignupRulesContainer">
+        <property name="rules">
+            <map>
+                <entry key="name" value-ref="nameRule"/>
+                <entry key="surname" value-ref="surnameRule"/>
+                <entry key="email" value-ref="emailRule"/>
+                <entry key="password" value-ref="passwordRule"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="nameRule" class="ua.nure.kopaniev.util.validation.rules.NameRule"/>
+    <bean id="surnameRule" class="ua.nure.kopaniev.util.validation.rules.SurnameRule"/>
+    <bean id="emailRule" class="ua.nure.kopaniev.util.validation.rules.EmailRule"/>
+    <bean id="passwordRule" class="ua.nure.kopaniev.util.validation.rules.PasswordRule"/>
+</beans>

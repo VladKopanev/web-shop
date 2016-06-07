@@ -21,7 +21,7 @@ public class OrderDAO implements OrderRepository {
     @Autowired
     private NamedParameterJdbcTemplate template;
 
-    private static final String INSERT_ORDER = "INSERT INTO order(id_user, date) VALUES (:idUser, :date)";
+    private static final String INSERT_ORDER = "INSERT INTO `order`(id_user, date) VALUES (:idUser, :date)";
     private static final String INSERT_ORDER_ITEM = "INSERT INTO order_item(order_id, item_id, quantity) " +
                                                     "VALUES (:orderId, :itemId, :quantity)";
 

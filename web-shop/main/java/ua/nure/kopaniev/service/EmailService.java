@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring4.SpringTemplateEngine;
@@ -38,10 +39,12 @@ public class EmailService {
        sendMessage(email, data, EmailType.CUSTOMER_MAIL.getName());
     };
 
+
     public void sendNotificationToManager(EmailData emailData) {
         sendMessage(managerEmail, emailData, EmailType.MANAGER_MAIL.getName());
     }
 
+    @Async
     @SneakyThrows(MessagingException.class)
     private void sendMessage(String email, Object data, String viewName) {
         //Prepare the evaluation context
